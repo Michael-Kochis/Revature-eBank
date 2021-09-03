@@ -6,7 +6,7 @@ import lombok.Setter;
 public class BankAccount {
     private String type = "checking";
     @Getter @Setter private double balance;
-    @Getter @Setter private int accountNumber;
+    @Getter @Setter private long accountNumber;
 
     public String getType() {
         return this.type;

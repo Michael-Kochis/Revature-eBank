@@ -1,8 +1,6 @@
 package tests.components;
 
-import com.revature.mikeworks.components.Admin;
 import com.revature.mikeworks.components.Customer;
-import com.revature.mikeworks.components.Employee;
 import com.revature.mikeworks.enums.BankSecurity;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,14 +25,7 @@ class CustomerTest {
         assertNotNull(person);
     }
 
-    @Test
-    void instantiateEmployee() {
-        Employee worker = new Employee();
-
-        assertNotNull(worker);
-    }
-
-    @Test
+   @Test
     void customerIsNotEmployee() {
         assertFalse(person.isEmployee());
     }
@@ -46,37 +37,30 @@ class CustomerTest {
 
     @Test
     void employeeIsEmployee() {
-        Employee worker = new Employee();
+        person.setSecurity(BankSecurity.EMPLOYEE);
 
-        assertTrue(worker.isEmployee());
+        assertTrue(person.isEmployee());
     }
 
     @Test
     void employeeIsNotAdmin() {
-        Employee worker = new Employee();
+        person.setSecurity(BankSecurity.EMPLOYEE);
 
-        assertFalse(worker.isAdmin());
-    }
-
-    @Test
-    void instantiateAdmin() {
-        Admin boss = new Admin();
-
-        assertNotNull(boss);
+        assertFalse(person.isAdmin());
     }
 
     @Test
     void adminIsEmployee() {
-        Admin boss = new Admin();
+        person.setSecurity(BankSecurity.ADMIN);
 
-        assertTrue(boss.isEmployee());
+        assertTrue(person.isEmployee());
     }
 
     @Test
     void adminIsAdmin() {
-        Admin boss = new Admin();
+        person.setSecurity(BankSecurity.ADMIN);
 
-        assertTrue(boss.isAdmin());
+        assertTrue(person.isAdmin());
     }
 
     @Test
@@ -115,5 +99,44 @@ class CustomerTest {
         assertFalse(person.isAdmin());
         person.setSecurity(BankSecurity.ADMIN);
         assertTrue(person.isAdmin());
+    }
+
+    @Test
+    void userHasFirstName() {
+        assertNull(person.getFirstName());
+    }
+
+    @Test
+    void firstNameCanBeSet() {
+        String neoName = "Mayor";
+
+        person.setFirstName(neoName);
+        assertEquals(neoName, person.getFirstName());
+    }
+
+    @Test
+    void userHasLastName() {
+        assertNull(person.getLastName());
+    }
+
+    @Test
+    void lastNameCanBeSet() {
+        String neoName = "Miller";
+
+        person.setLastName(neoName);
+        assertEquals(neoName, person.getLastName());
+    }
+
+    @Test
+    void hasEmail() {
+        assertNull(person.getEmail());
+    }
+
+    @Test
+    void emailCanBeSet() {
+        String neoEmail = "nemo@nobody.com";
+
+        person.setEmail(neoEmail);
+        assertEquals(neoEmail, person.getEmail());
     }
 }

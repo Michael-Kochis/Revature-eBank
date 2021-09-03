@@ -8,6 +8,9 @@ public class Customer {
     @Getter @Setter private String username;
     @Getter @Setter private String password;
     @Getter @Setter private BankSecurity security;
+    @Getter @Setter private String firstName;
+    @Getter @Setter private String lastName;
+    @Getter @Setter private String email;
 
     public Customer() {
         this.security = BankSecurity.CUSTOMER;
@@ -20,5 +23,6 @@ public class Customer {
     public boolean isAdmin() {
         return (this.security == BankSecurity.ADMIN);
     }
+
 
 }
