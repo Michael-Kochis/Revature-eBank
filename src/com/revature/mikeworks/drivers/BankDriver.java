@@ -1,18 +1,12 @@
 package com.revature.mikeworks.drivers;
 
-import com.revature.mikeworks.components.LoginRegisterMenu;
-import com.revature.mikeworks.utils.ValidScanner;
+import com.revature.mikeworks.controllers.LoginRegisterMenuController;
 
 public class BankDriver {
-    private static LoginRegisterMenu lr = new LoginRegisterMenu();
-    private static ValidScanner scan = new ValidScanner();
+    private static LoginRegisterMenuController mc = new LoginRegisterMenuController();
 
     public static void runMain() {
-        int input = 0;
-        do {
-            lr.showMenu();
-            System.out.println("Input your choice");
-            input = scan.readInt();
-        } while (input < 1 || input > 3);
+        int input = mc.readOption();
+        System.out.println(input);
     }
 }
