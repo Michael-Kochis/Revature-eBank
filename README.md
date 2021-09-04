@@ -10,7 +10,7 @@ create an application that simulates simple banking transactions
 - [ ] Logging should be accomplished  
   - [ ] using Log4J  
   - [ ] All transactions should be logged  
-- [ ] All information should be persisted using text files and serialization  
+- [x] All information should be persisted using text files and serialization  
 - [ ] All interaction with the user should be done through the console  
   - [x] using the Scanner class  
 - [ ] Customers of the bank should be able to 
