@@ -1,9 +1,9 @@
 package tests.handlers;
 
 import com.revature.mikeworks.components.Customer;
+import com.revature.mikeworks.enums.BankSecurity;
 import com.revature.mikeworks.handlers.CustomerHandler;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -58,5 +58,22 @@ class CustomerHandlerTest {
         handler.add(neoCust);
 
         assertEquals(expect, handler.size());
+    }
+
+    @Test
+    void savesAndLoads() {
+        Customer neoCust = new Customer();
+        neoCust.setSecurity(BankSecurity.ADMIN);
+        neoCust.setUsername("IBDBoss");
+        neoCust.setPassword("password");
+        neoCust.setEmail("big.boss@ebank.com");
+        neoCust.setFirstName("Big");
+        neoCust.setLastName("Boss");
+        handler.add(neoCust);
+
+        handler.saveAll();
+        handler.loadAll();
+
+        assertTrue(handler.contains(neoCust));
     }
 }

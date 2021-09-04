@@ -1,16 +1,18 @@
 package com.revature.mikeworks.handlers;
 
 import com.revature.mikeworks.components.Customer;
+import com.revature.mikeworks.dao.CustomerDAO;
 import lombok.Getter;
-import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class CustomerHandler {
+public class CustomerHandler implements Serializable {
     @Getter private HashMap<String, Customer> customerList;
+    final static CustomerDAO dao = new CustomerDAO();
 
     public CustomerHandler() {
-        this.customerList = new HashMap<String, Customer>();
+        this.customerList = new HashMap<>();
     }
 
     public void add(Customer neoCust) {
@@ -22,10 +24,26 @@ public class CustomerHandler {
     }
 
     public boolean contains(Customer neoCust) {
-        return this.customerList.containsKey(neoCust.getUsername());
+        return this.contains(neoCust.getUsername());
+    }
+
+    public void loadAll() {
+        this.customerList = dao.readCustomers();
+    }
+
+    public void saveAll() {
+        dao.writeCustomers(this.customerList);
     }
 
     public int size() {
         return this.customerList.size();
+    }
+
+    public String toString() {
+        return this.customerList.toString();
+    }
+
+    public boolean contains(String neoUserName) {
+        return this.customerList.containsKey(neoUserName);
     }
 }
