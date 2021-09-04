@@ -46,4 +46,14 @@ public class CustomerHandler implements Serializable {
     public boolean contains(String neoUserName) {
         return this.customerList.containsKey(neoUserName);
     }
+
+    public boolean canLogIn(String uname, String pass) {
+        Customer testMyPassword = this.getCustomerByUsername(uname);
+
+        return (pass.equals(testMyPassword.getPassword()) );
+    }
+
+    public Customer getCustomerByUsername(String username) {
+        return this.customerList.get(username);
+    }
 }

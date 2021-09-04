@@ -8,7 +8,7 @@ import com.revature.mikeworks.utils.ValidScanner;
 import java.util.Objects;
 
 public class RegisterDriver {
-    private static boolean looping = true;
+    private static boolean looping;
     private static final RegisterMenuController menu = new RegisterMenuController();
     private static Customer registerMe = new Customer();
     private static CustomerHandler ch;
@@ -17,6 +17,8 @@ public class RegisterDriver {
     public void runRegisterDriver(CustomerHandler ch) {
         RegisterDriver.ch = ch;
         int input;
+        looping = true;
+
         while (looping) {
             System.out.println(registerMe);
             System.out.println();
