@@ -58,4 +58,19 @@ class BankAccountHandlerTest {
 
         assertEquals(expect, handler.size());
     }
+
+    @Test
+    void savesAndLoads() {
+        BankAccount neoAcct = new BankAccount();
+        neoAcct.setBalance(1000.00);
+        neoAcct.setType("checking");
+        neoAcct.setAccountNumber(1L);
+        handler.add(neoAcct);
+
+        handler.saveAll();
+        handler.loadAll();
+
+        assertTrue(handler.contains(neoAcct));
+    }
+
 }

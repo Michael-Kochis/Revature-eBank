@@ -3,7 +3,9 @@ package com.revature.mikeworks.components;
 import lombok.Getter;
 import lombok.Setter;
 
-public class BankAccount {
+import java.io.Serializable;
+
+public class BankAccount implements Serializable {
     private String type = "checking";
     @Getter @Setter private double balance;
     @Getter @Setter private long accountNumber;
