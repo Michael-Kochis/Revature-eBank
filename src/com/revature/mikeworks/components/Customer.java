@@ -15,6 +15,7 @@ public class Customer implements Serializable {
     @Getter @Setter private String email;
 
     public Customer() {
+        this.setUsername("");
         this.security = BankSecurity.CUSTOMER;
     }
 

@@ -24,7 +24,7 @@ public class CustomerHandler implements Serializable {
     }
 
     public boolean contains(Customer neoCust) {
-        return this.customerList.containsKey(neoCust.getUsername());
+        return this.contains(neoCust.getUsername());
     }
 
     public void loadAll() {
@@ -41,5 +41,9 @@ public class CustomerHandler implements Serializable {
 
     public String toString() {
         return this.customerList.toString();
+    }
+
+    public boolean contains(String neoUserName) {
+        return this.customerList.containsKey(neoUserName);
     }
 }
