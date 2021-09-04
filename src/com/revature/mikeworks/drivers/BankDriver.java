@@ -20,7 +20,7 @@ public class BankDriver {
 
     private static void mainStep(int next) {
         switch (next) {
-            case (1) -> ld.runLoginDriver();
+            case (1) -> ld.runLoginDriver(cHandler);
             case (2) -> rd.runRegisterDriver(cHandler);
             default -> {
                 looping = false;
