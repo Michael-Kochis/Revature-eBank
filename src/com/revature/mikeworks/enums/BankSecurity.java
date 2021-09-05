@@ -22,4 +22,18 @@ public enum BankSecurity {
             default: return BankSecurity.CUSTOMER;
         }
     }
+
+    public static boolean authEqualOrGreater(BankSecurity itemAuth, BankSecurity authToCheck) {
+        boolean returnThis = false;
+
+        if (itemAuth == BankSecurity.CUSTOMER) {
+            returnThis = true;
+        } else if (authToCheck == BankSecurity.ADMIN) {
+            returnThis = true;
+        } else {
+            returnThis = (authToCheck == BankSecurity.EMPLOYEE);
+        }
+
+        return returnThis;
+    }
 }
