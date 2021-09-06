@@ -16,6 +16,7 @@ public class LoginDriver {
         if (cHandler.canLogIn(uname, pass)) {
             Customer loggedIn = cHandler.getCustomerByUsername(username);
             BankData.setWhoAmI(loggedIn);
+            System.out.println(BankData.getWhoAmI());
             bud.doMain();
             looping = false;
         }

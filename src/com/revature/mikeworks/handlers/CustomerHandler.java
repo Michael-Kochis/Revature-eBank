@@ -6,6 +6,7 @@ import lombok.Getter;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.Map;
 
 public class CustomerHandler implements Serializable {
     @Getter private HashMap<String, Customer> customerList;
@@ -55,5 +56,12 @@ public class CustomerHandler implements Serializable {
 
     public Customer getCustomerByUsername(String username) {
         return this.customerList.get(username);
+    }
+
+    public void showAll() {
+        for (Map.Entry<String,Customer> entry : this.customerList.entrySet()) {
+            System.out.println(entry.toString());
+            System.out.println();
+        }
     }
 }

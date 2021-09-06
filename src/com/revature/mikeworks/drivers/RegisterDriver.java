@@ -1,5 +1,6 @@
 package com.revature.mikeworks.drivers;
 
+import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.components.Customer;
 import com.revature.mikeworks.controllers.RegisterMenuController;
 import com.revature.mikeworks.handlers.CustomerHandler;
@@ -11,11 +12,10 @@ public class RegisterDriver {
     private static boolean looping;
     private static final RegisterMenuController menu = new RegisterMenuController();
     private static Customer registerMe = new Customer();
-    private static CustomerHandler ch;
+    private static CustomerHandler cHandler = BankData.getCHandler();
     private static final ValidScanner scan = new ValidScanner();
     
-    public void runRegisterDriver(CustomerHandler ch) {
-        RegisterDriver.ch = ch;
+    public void runRegisterDriver() {
         int input;
         looping = true;
 
@@ -42,7 +42,7 @@ public class RegisterDriver {
     private static void processUserName() {
         System.out.println("What username do you want?");
         String neoUserName = scan.readString();
-        if (ch.contains(neoUserName)) {
+        if (cHandler.contains(neoUserName)) {
             System.out.println("That username is taken, select another.");
         } else if (Objects.equals(neoUserName, "") || neoUserName.length() < 3) {
             System.out.println("Enter a valid username, three character minimum");
@@ -77,7 +77,7 @@ public class RegisterDriver {
 
     private static void processRegister() {
         if (validRegisterMe()) {
-            ch.add(registerMe);
+            cHandler.add(registerMe);
             registerMe = new Customer();
         } else {
             System.out.println("All users need username, password, first and last name.");

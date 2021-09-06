@@ -8,7 +8,7 @@ import lombok.Setter;
 
 public class BankMenuAuth {
     private int size;
-    private static BankMenuAuthItem[] menuItems;
+    private BankMenuAuthItem[] menuItems;
 
     public BankMenuAuth() {
         size = 10;
@@ -46,10 +46,11 @@ public class BankMenuAuth {
 
     public void showMenu(BankSecurity auth) {
         for (int index =0; index < size; index++) {
-            if (BankSecurity.authEqualOrGreater(this.menuItems[index].getItemAuth(), auth)) {
+            if ((this.menuItems[index] != null) &&
+                    BankSecurity.authEqualOrGreater(this.menuItems[index].getItemAuth(), auth)) {
                 String outString = this.menuItems[index].getItemText();
                 if (outString != "")
-                    System.out.println(index + ": " + this.menuItems[index]);
+                    System.out.println(index + ": " + outString);
             }
         }
     }

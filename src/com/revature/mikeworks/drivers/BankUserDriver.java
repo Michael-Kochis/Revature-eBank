@@ -15,10 +15,11 @@ public class BankUserDriver {
     private static final CustomerDirectoryDriver cdDriver = new CustomerDirectoryDriver();
     private static final CustomerEditDriver ceDriver = new CustomerEditDriver();
     private static boolean looping;
-    public static Customer whoAmI = BankData.getWhoAmI();
+    public static Customer whoAmI;
     public static final BankAccountHandler baHandler = BankData.getBaHandler();
 
     private void setup() {
+        whoAmI = BankData.getWhoAmI();
         baHandler.loadAll();
         looping = true;
     }
