@@ -1,5 +1,6 @@
 package com.revature.mikeworks.drivers;
 
+import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.components.Customer;
 import com.revature.mikeworks.controllers.CentralMenuController;
 import com.revature.mikeworks.enums.BankSecurity;
@@ -14,14 +15,11 @@ public class BankUserDriver {
     private static final CustomerDirectoryDriver cdDriver = new CustomerDirectoryDriver();
     private static final CustomerEditDriver ceDriver = new CustomerEditDriver();
     private static boolean looping;
-    public static Customer whoAmI;
-    public static CustomerHandler cHandler;
-    public static BankAccountHandler baHandler;
+    public static Customer whoAmI = BankData.getWhoAmI();
+    public static final CustomerHandler cHandler = BankData.getCHandler();
+    public static final BankAccountHandler baHandler = BankData.getBaHandler();
 
-    private void setup(Customer loggedIn, CustomerHandler cHandler) {
-        BankUserDriver.whoAmI = loggedIn;
-        BankUserDriver.cHandler = cHandler;
-        BankUserDriver.baHandler = new BankAccountHandler();
+    private void setup() {
         baHandler.loadAll();
         looping = true;
     }
@@ -31,7 +29,7 @@ public class BankUserDriver {
     }
 
     public void doMain(Customer loggedIn, CustomerHandler cHandler) {
-        setup(loggedIn, cHandler);
+        setup();
 
         while (looping) {
             int option = cmc.readOption(whoAmI.getSecurity());
@@ -55,33 +53,33 @@ public class BankUserDriver {
 
     private static void processEditBankAccounts() {
         if (BankSecurity.authEqualOrGreater(BankSecurity.ADMIN, whoAmI.getSecurity()) ) {
-            aeDriver.doMain(baHandler);
+            aeDriver.doMain();
         }
     }
 
     private static void proessEditProfiles() {
         if (BankSecurity.authEqualOrGreater(BankSecurity.ADMIN, whoAmI.getSecurity())) {
-            ceDriver.doMain(cHandler);
+            ceDriver.doMain();
         }
     }
 
     private static void processApproveDenyAccounts() {
         if(BankSecurity.authEqualOrGreater(BankSecurity.EMPLOYEE, whoAmI.getSecurity())) {
-            aaDriver.doMain(baHandler);
+            aaDriver.doMain();
         }
     }
 
     private static void porcessViewCustomerInformation() {
         if (BankSecurity.authEqualOrGreater(BankSecurity.EMPLOYEE, whoAmI.getSecurity()) ) {
-            cdDriver.doMain(cHandler, whoAmI);
+            cdDriver.doMain();
         }
     }
 
     private static void processBankAccountOptionsMenu() {
-        baDriver.doMain(baHandler, whoAmI);
+        baDriver.doMain();
     }
 
     private static void processProfileOptionsMenu() {
-        cdDriver.doMain(cHandler, whoAmI);
+        cdDriver.doMain();
     }
 }
