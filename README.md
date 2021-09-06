@@ -11,7 +11,7 @@ create an application that simulates simple banking transactions
   - [ ] using Log4J  
   - [ ] All transactions should be logged  
 - [x] All information should be persisted using text files and serialization  
-- [ ] All interaction with the user should be done through the console  
+- [x] All interaction with the user should be done through the console  
   - [x] using the Scanner class  
 - [ ] Customers of the bank should be able to 
   - [ ] register with a username and password 
@@ -25,7 +25,7 @@ create an application that simulates simple banking transactions
   - [ ] trying to input negative amounts,  
   - [ ] overdrawing from accounts etc.  
 - [ ] Employees of the bank should be able to  
-  - [ ] view all of their customer's information.  
+  - [x] view all of their customer's information.  
   - [ ] This includes: Account information  
   - [ ] Account balances  
   - [ ] Personal information  
