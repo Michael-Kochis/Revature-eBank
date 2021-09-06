@@ -14,7 +14,7 @@ public class CentralMenuController {
             cm.showMenu(auth);
             System.out.println("Input your choice");
             input = scan.readInt();
-        } while (input < 1 || input > cm.size());
+        } while (input < 0 || input > 6);
 
         return input;
     }
