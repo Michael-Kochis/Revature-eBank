@@ -14,7 +14,7 @@ public class AccountApprovalMenuController {
             aam.showMenu(auth);
             System.out.println("Input your choice");
             input = scan.readInt();
-        } while (input < 0 || input > 6);
+        } while (input < 0 || input > 2);
 
         return input;
     }

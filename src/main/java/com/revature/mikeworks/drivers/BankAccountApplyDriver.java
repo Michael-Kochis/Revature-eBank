@@ -38,10 +38,10 @@ public class BankAccountApplyDriver {
 
     private void mainStep(int option) {
         switch (option) {
-            case (1): doTypeChange();
-            case (2): doAddOwner();
-            case (3): doRemoveOwner();
-            case (4): doApplyForAccount();
+            case (1): doTypeChange(); break;
+            case (2): doAddOwner(); break;
+            case (3): doRemoveOwner(); break;
+            case (4): doApplyForAccount(); break;
             default: looping = false;
         }
     }

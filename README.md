@@ -21,18 +21,18 @@ create an application that simulates simple banking transactions
   - [ ] withdraw,  
   - [ ] deposit, and  
   - [ ] transfer funds between accounts  
-- [ ] All basic validation should be done, such as  
-  - [ ] trying to input negative amounts,  
-  - [ ] overdrawing from accounts etc.  
+- [x] All basic validation should be done, such as  
+  - [x] trying to input negative amounts,  
+  - [x] overdrawing from accounts etc.  
 - [ ] Employees of the bank should be able to  
   - [x] view all of their customer's information.  
   - [ ] This includes: Account information  
   - [ ] Account balances  
   - [ ] Personal information  
-  - [ ] approve/deny open applications for accounts  
+  - [x] approve/deny open applications for accounts  
 - [ ] Bank admins should be able to  
   - [ ] view and edit all accounts  
-  - [ ] This includes: Approving/denying accounts  
+  - [x] This includes: Approving/denying accounts  
   - [ ] withdrawing,  
   - [ ] depositing,  
   - [ ] transferring from all accounts  

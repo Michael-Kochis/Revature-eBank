@@ -13,3 +13,28 @@ Balance: 0.0
 Owner List: [Neo]
 Status: APPLIED
 2021-09-06 16:37:54,235 INFO c.r.m.d.LoginDriver [main] Logged out: Neo
+2021-09-06 18:13:03,482 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-06 18:13:25,696 ERROR c.r.m.h.BankAccountHandler [main] Attempt to modify non-existing account: 4
+2021-09-06 18:15:13,036 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: WageSlave
+Name: Slave Worker
+Email: iSlave@slave.com
+2021-09-06 18:15:36,886 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-06 18:16:19,904 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-06 18:16:31,981 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-06 18:17:24,486 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 3: savings
+Balance: 0.0
+Owner List: [IBDBoss, WageSlave]
+Status: APPLIED
+2021-09-06 18:19:02,300 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave
+2021-09-06 18:19:13,397 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-06 18:19:56,261 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-06 18:20:05,995 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: Neo
+2021-09-06 18:20:51,850 INFO c.r.m.d.LoginDriver [main] Logged out: Neo
+2021-09-06 18:21:20,068 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-06 18:22:17,915 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave

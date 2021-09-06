@@ -32,4 +32,17 @@ public class ValidScanner {
     public String readString() {
         return scan.next();
     }
+
+    public long readLong() {
+        while (scan.hasNext()) {
+            if (scan.hasNextLong()) {
+                return scan.nextLong();
+            } else {
+                System.out.println("Long integer expected");
+                scan.nextLine();
+            }
+
+        }
+        return -1L;
+    }
 }
