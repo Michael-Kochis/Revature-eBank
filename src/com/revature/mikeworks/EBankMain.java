@@ -1,7 +1,5 @@
 package com.revature.mikeworks;
 
-import com.revature.mikeworks.components.Customer;
-import com.revature.mikeworks.components.LoginRegisterMenu;
 import com.revature.mikeworks.drivers.BankDriver;
 
 public class EBankMain {
