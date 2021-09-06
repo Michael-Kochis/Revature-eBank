@@ -5,6 +5,8 @@ import com.revature.mikeworks.components.Customer;
 import com.revature.mikeworks.controllers.RegisterMenuController;
 import com.revature.mikeworks.handlers.CustomerHandler;
 import com.revature.mikeworks.utils.ValidScanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
@@ -14,7 +16,8 @@ public class RegisterDriver {
     private static Customer registerMe = new Customer();
     private static CustomerHandler cHandler = BankData.getCHandler();
     private static final ValidScanner scan = new ValidScanner();
-    
+    private static Logger log = LogManager.getLogger(RegisterDriver.class);
+
     public void runRegisterDriver() {
         int input;
         looping = true;
@@ -78,6 +81,7 @@ public class RegisterDriver {
     private static void processRegister() {
         if (validRegisterMe()) {
             cHandler.add(registerMe);
+            log.info("New Customer registered: " + registerMe);
             registerMe = new Customer();
         } else {
             System.out.println("All users need username, password, first and last name.");

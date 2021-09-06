@@ -19,9 +19,10 @@ public class LoginDriver {
         if (cHandler.canLogIn(uname, pass)) {
             Customer loggedIn = cHandler.getCustomerByUsername(username);
             BankData.setWhoAmI(loggedIn);
-            log.info("Logged in as: " + loggedIn);
-            System.out.println(BankData.getWhoAmI());
+            log.info("\nLogged in as: " + uname);
             bud.doMain();
+            log.info("Logged out: " + uname);
+            BankData.setWhoAmI(null);
             looping = false;
         } else {
             log.warn("Invalid password for: " + uname);

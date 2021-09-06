@@ -1,7 +1,9 @@
 package com.revature.mikeworks.drivers;
 
+import com.revature.mikeworks.components.BankAccount;
 import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.controllers.LoginRegisterMenuController;
+import com.revature.mikeworks.handlers.BankAccountHandler;
 import com.revature.mikeworks.handlers.CustomerHandler;
 
 public class BankDriver {
@@ -13,6 +15,12 @@ public class BankDriver {
 
     private static void setup() {
         cHandler.loadAll();
+//        BankAccountHandler baHandler = new BankAccountHandler();
+//        BankAccount blank = new BankAccount();
+//        blank.setAccountNumber(1L);
+//        blank.addOwner("IBDBoss");
+//        baHandler.add(blank);
+//        baHandler.saveAll();
     }
 
     private static void teardown() {

@@ -7,16 +7,16 @@ create an application that simulates simple banking transactions
 - [ ] 100% test coverage is expected  
   - [x] using JUnit  
   - [x] You should be using TDD  
-- [ ] Logging should be accomplished  
-  - [ ] using Log4J  
-  - [ ] All transactions should be logged  
+- [x] Logging should be accomplished  
+  - [x] using Log4J  
+  - [x] All transactions should be logged  
 - [x] All information should be persisted using text files and serialization  
 - [x] All interaction with the user should be done through the console  
   - [x] using the Scanner class  
-- [ ] Customers of the bank should be able to 
-  - [ ] register with a username and password 
-  - [ ] and apply to open an account.  
-  - [ ] Customers should be able to apply for joint accounts  
+- [x] Customers of the bank should be able to 
+  - [x] register with a username and password 
+  - [x] and apply to open an account.  
+  - [x] Customers should be able to apply for joint accounts  
 - [ ] Once the account is open, customers should be able to  
   - [ ] withdraw,  
   - [ ] deposit, and  

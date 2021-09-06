@@ -1,3 +1,15 @@
 2021-09-06 13:45:54,744 INFO c.r.m.d.LoginDriver [main] Logged in as: Username: IBDBoss
 Name: Big Boss
 Email: big.boss@ebank.com
+2021-09-06 16:22:41,176 INFO c.r.m.d.LoginDriver [main] Logged in as: Neo
+2021-09-06 16:23:43,490 INFO c.r.m.d.LoginDriver [main] Logged in as: Neo
+2021-09-06 16:27:29,488 INFO c.r.m.d.LoginDriver [main] Logged in as: Neo
+2021-09-06 16:30:05,635 INFO c.r.m.d.LoginDriver [main] Logged in as: Neo
+2021-09-06 16:30:55,775 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: com.revature.mikeworks.components.BankAccount@67f639d3
+2021-09-06 16:35:55,907 INFO c.r.m.d.LoginDriver [main] Logged in as: Neo
+2021-09-06 16:37:24,705 INFO c.r.m.d.LoginDriver [main] Logged in as: Neo
+2021-09-06 16:37:39,489 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 2: checking
+Balance: 0.0
+Owner List: [Neo]
+Status: APPLIED
+2021-09-06 16:37:54,235 INFO c.r.m.d.LoginDriver [main] Logged out: Neo
