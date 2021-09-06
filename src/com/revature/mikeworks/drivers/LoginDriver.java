@@ -1,5 +1,6 @@
 package com.revature.mikeworks.drivers;
 
+import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.components.Customer;
 import com.revature.mikeworks.handlers.CustomerHandler;
 import com.revature.mikeworks.utils.ValidScanner;
@@ -8,19 +9,19 @@ public class LoginDriver {
     private static boolean looping;
     private static String username, password;
     private static final ValidScanner scan = new ValidScanner();
-    private static CustomerHandler cHandler;
+    private static CustomerHandler cHandler = BankData.getCHandler();
     private static final BankUserDriver bud = new BankUserDriver();
 
     public void attemptLogin(String uname, String pass) {
         if (cHandler.canLogIn(uname, pass)) {
             Customer loggedIn = cHandler.getCustomerByUsername(username);
-            bud.doMain(loggedIn, cHandler);
+            BankData.setWhoAmI(loggedIn);
+            bud.doMain();
             looping = false;
         }
     }
 
-    public void runLoginDriver(CustomerHandler ch) {
-        LoginDriver.cHandler = ch;
+    public void runLoginDriver() {
         looping = true;
         while (looping) {
             System.out.println("Enter your username");

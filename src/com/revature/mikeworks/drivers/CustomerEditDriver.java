@@ -11,7 +11,6 @@ public class CustomerEditDriver {
 
     public void doMain() {
         this.looping = true;
-        this.cHandler = cHandler;
 
         while(looping) {
 

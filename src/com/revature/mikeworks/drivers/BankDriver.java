@@ -1,5 +1,6 @@
 package com.revature.mikeworks.drivers;
 
+import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.controllers.LoginRegisterMenuController;
 import com.revature.mikeworks.handlers.CustomerHandler;
 
@@ -8,7 +9,7 @@ public class BankDriver {
     private static final LoginRegisterMenuController mc = new LoginRegisterMenuController();
     private static final LoginDriver ld = new LoginDriver();
     private static final RegisterDriver rd = new RegisterDriver();
-    public static final CustomerHandler cHandler = new CustomerHandler();
+    public static final CustomerHandler cHandler = BankData.getCHandler();
 
     private static void setup() {
         cHandler.loadAll();

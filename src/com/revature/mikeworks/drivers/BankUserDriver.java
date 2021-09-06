@@ -16,7 +16,6 @@ public class BankUserDriver {
     private static final CustomerEditDriver ceDriver = new CustomerEditDriver();
     private static boolean looping;
     public static Customer whoAmI = BankData.getWhoAmI();
-    public static final CustomerHandler cHandler = BankData.getCHandler();
     public static final BankAccountHandler baHandler = BankData.getBaHandler();
 
     private void setup() {
@@ -28,7 +27,7 @@ public class BankUserDriver {
         baHandler.saveAll();
     }
 
-    public void doMain(Customer loggedIn, CustomerHandler cHandler) {
+    public void doMain() {
         setup();
 
         while (looping) {
@@ -43,7 +42,7 @@ public class BankUserDriver {
         switch(option) {
             case (1) -> processProfileOptionsMenu();
             case (2) -> processBankAccountOptionsMenu();
-            case (3) -> porcessViewCustomerInformation();
+            case (3) -> processViewCustomerInformation();
             case (4) -> processApproveDenyAccounts();
             case (5) -> proessEditProfiles();
             case (6) -> processEditBankAccounts();
@@ -69,7 +68,7 @@ public class BankUserDriver {
         }
     }
 
-    private static void porcessViewCustomerInformation() {
+    private static void processViewCustomerInformation() {
         if (BankSecurity.authEqualOrGreater(BankSecurity.EMPLOYEE, whoAmI.getSecurity()) ) {
             cdDriver.doMain();
         }
