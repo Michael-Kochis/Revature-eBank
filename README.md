@@ -4,36 +4,36 @@ Leveraging Java 8,
 create an application that simulates simple banking transactions     
 ## Requirements   
 - [x] Build the application using Java 8  
-- [ ] 100% test coverage is expected  
+- [x] 100% test coverage is expected  
   - [x] using JUnit  
   - [x] You should be using TDD  
-- [ ] Logging should be accomplished  
-  - [ ] using Log4J  
-  - [ ] All transactions should be logged  
+- [x] Logging should be accomplished  
+  - [x] using Log4J  
+  - [x] All transactions should be logged  
 - [x] All information should be persisted using text files and serialization  
-- [ ] All interaction with the user should be done through the console  
+- [x] All interaction with the user should be done through the console  
   - [x] using the Scanner class  
-- [ ] Customers of the bank should be able to 
-  - [ ] register with a username and password 
-  - [ ] and apply to open an account.  
-  - [ ] Customers should be able to apply for joint accounts  
-- [ ] Once the account is open, customers should be able to  
-  - [ ] withdraw,  
-  - [ ] deposit, and  
-  - [ ] transfer funds between accounts  
-- [ ] All basic validation should be done, such as  
-  - [ ] trying to input negative amounts,  
-  - [ ] overdrawing from accounts etc.  
-- [ ] Employees of the bank should be able to  
-  - [ ] view all of their customer's information.  
-  - [ ] This includes: Account information  
-  - [ ] Account balances  
-  - [ ] Personal information  
-  - [ ] approve/deny open applications for accounts  
-- [ ] Bank admins should be able to  
-  - [ ] view and edit all accounts  
-  - [ ] This includes: Approving/denying accounts  
-  - [ ] withdrawing,  
-  - [ ] depositing,  
-  - [ ] transferring from all accounts  
-  - [ ] canceling accounts  
+- [x] Customers of the bank should be able to 
+  - [x] register with a username and password 
+  - [x] and apply to open an account.  
+  - [x] Customers should be able to apply for joint accounts  
+- [x] Once the account is open, customers should be able to  
+  - [x] withdraw,  
+  - [x] deposit, and  
+  - [x] transfer funds between accounts  
+- [x] All basic validation should be done, such as  
+  - [x] trying to input negative amounts,  
+  - [x] overdrawing from accounts etc.  
+- [x] Employees of the bank should be able to  
+  - [x] view all of their customer's information.  
+  - [x] This includes: Account information  
+  - [x] Account balances  
+  - [x] Personal information  
+  - [x] approve/deny open applications for accounts  
+- [x] Bank admins should be able to  
+  - [x] view and edit all accounts  
+  - [x] This includes: Approving/denying accounts  
+  - [x] withdrawing,  
+  - [x] depositing,  
+  - [x] transferring from all accounts  
+  - [x] canceling accounts  
