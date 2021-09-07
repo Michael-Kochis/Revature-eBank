@@ -35,6 +35,7 @@ public class Customer implements Serializable {
         sb.append("Name: " + this.firstName + " " + this.lastName);
         sb.append("\n");
         sb.append("Email: " + this.email);
+        sb.append("\nAccess level: " + this.security);
 
         return sb.toString();
     }

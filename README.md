@@ -4,7 +4,7 @@ Leveraging Java 8,
 create an application that simulates simple banking transactions     
 ## Requirements   
 - [x] Build the application using Java 8  
-- [ ] 100% test coverage is expected  
+- [x] 100% test coverage is expected  
   - [x] using JUnit  
   - [x] You should be using TDD  
 - [x] Logging should be accomplished  
@@ -24,11 +24,11 @@ create an application that simulates simple banking transactions
 - [x] All basic validation should be done, such as  
   - [x] trying to input negative amounts,  
   - [x] overdrawing from accounts etc.  
-- [ ] Employees of the bank should be able to  
+- [x] Employees of the bank should be able to  
   - [x] view all of their customer's information.  
-  - [ ] This includes: Account information  
-  - [ ] Account balances  
-  - [ ] Personal information  
+  - [x] This includes: Account information  
+  - [x] Account balances  
+  - [x] Personal information  
   - [x] approve/deny open applications for accounts  
 - [ ] Bank admins should be able to  
   - [ ] view and edit all accounts  

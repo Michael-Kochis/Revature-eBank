@@ -15,7 +15,7 @@ public class CustomerEditMenuController {
             cem.showMenu(auth);
             System.out.println("Input your choice");
             input = scan.readInt();
-        } while (input < 0 || input > 6);
+        } while (input < 0 || input > 9);
 
         return input;
     }

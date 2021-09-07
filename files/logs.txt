@@ -38,3 +38,22 @@ Logged in as: Neo
 2021-09-06 18:21:20,068 INFO c.r.m.d.LoginDriver [main] 
 Logged in as: WageSlave
 2021-09-06 18:22:17,915 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave
+2021-09-06 18:45:57,177 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-06 19:37:12,690 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-06 19:37:48,181 INFO c.r.m.h.CustomerHandler [main] User WageSlave now has authorization level employee
+2021-09-06 19:38:10,766 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-06 19:38:39,997 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-06 19:40:29,437 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave
+2021-09-06 19:41:11,136 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-06 19:41:45,472 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave
+2021-09-06 19:42:08,860 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-06 19:44:59,907 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-06 19:46:54,387 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-06 19:49:37,694 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave

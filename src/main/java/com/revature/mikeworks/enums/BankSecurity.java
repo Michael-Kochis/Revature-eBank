@@ -3,7 +3,7 @@ package com.revature.mikeworks.enums;
 public enum BankSecurity {
     CUSTOMER, EMPLOYEE, ADMIN;
 
-    public int toInt(BankSecurity value) {
+     public int toInt(BankSecurity value) {
         if (value == BankSecurity.CUSTOMER) {
             return 1;
         } else if (value == BankSecurity.EMPLOYEE) {
@@ -31,9 +31,28 @@ public enum BankSecurity {
         } else if (authToCheck == BankSecurity.ADMIN) {
             returnThis = true;
         } else {
-            returnThis = (authToCheck == BankSecurity.EMPLOYEE);
+            returnThis = (itemAuth == BankSecurity.EMPLOYEE);
         }
 
         return returnThis;
     }
+
+    public static String toString(BankSecurity auth) {
+         switch (auth) {
+             case CUSTOMER -> {
+                 return "customer";
+             }
+             case EMPLOYEE -> {
+                 return "employee";
+             }
+             case ADMIN -> {
+                 return "admin";
+             }
+             default -> {
+                 return "error";
+             }
+         }
+
+    }
+
 }
