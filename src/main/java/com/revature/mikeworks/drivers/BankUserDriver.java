@@ -10,13 +10,13 @@ import com.revature.mikeworks.handlers.CustomerHandler;
 public class BankUserDriver {
     private static final CentralMenuController cmc = new CentralMenuController();
     private static final AccountApprovalDriver aaDriver = new AccountApprovalDriver();
-    private static final AccountEditDriver aeDriver = new AccountEditDriver();
     private static final BankAccountDriver baDriver = new BankAccountDriver();
     private static final CustomerDirectoryDriver cdDriver = new CustomerDirectoryDriver();
     private static final CustomerEditDriver ceDriver = new CustomerEditDriver();
     private static boolean looping;
     public static Customer whoAmI;
     public static final BankAccountHandler baHandler = BankData.getBaHandler();
+    public static final BankAccountTransactionDriver batDriver = new BankAccountTransactionDriver();
 
     private void setup() {
         whoAmI = BankData.getWhoAmI();
@@ -53,7 +53,7 @@ public class BankUserDriver {
 
     private static void processEditBankAccounts() {
         if (BankSecurity.authEqualOrGreater(BankSecurity.ADMIN, whoAmI.getSecurity()) ) {
-            aeDriver.doMain();
+            batDriver.doMain();
         }
     }
 

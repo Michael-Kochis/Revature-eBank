@@ -29,7 +29,11 @@ public class BankAccountHandler {
     }
 
     public boolean contains(BankAccount neoAcct) {
-        return this.accountList.containsKey(neoAcct.getAccountNumber());
+        return contains(neoAcct.getAccountNumber() );
+    }
+
+    public boolean contains(Long seeking) {
+        return this.accountList.containsKey(seeking);
     }
 
     public int size() {
@@ -69,6 +73,7 @@ public class BankAccountHandler {
             editThis.setBalance(editThis.getBalance() + amount);
             this.accountList.remove(accountNumber);
             this.accountList.put(accountNumber, editThis);
+            log.info(amount + " was deposited into account " + accountNumber);
         }
     }
 
@@ -120,6 +125,7 @@ public class BankAccountHandler {
                 editThis.setBalance(editThis.getBalance() - amount);
                 this.accountList.remove(accountNumber);
                 this.accountList.put(accountNumber, editThis);
+                log.info(amount + " was withdrawn from account " + accountNumber);
             }
         }
     }
@@ -142,5 +148,29 @@ public class BankAccountHandler {
         } else {
             log.error("Attempt to modify non-existing account: " + account);
         }
+    }
+
+    public void showAll() {
+        for (BankAccount entry : this.accountList.values()) {
+            System.out.println(entry);
+            System.out.println();
+        }
+    }
+
+    public boolean isMyAccount(Long seeking, String username) {
+        BankAccount checkThis = this.accountList.get(seeking);
+        return checkThis.getOwner().contains(username);
+    }
+
+    public void updateStatus(long accountNumber, BankAccountStatus neoStatus) {
+        BankAccount editThis = this.accountList.get(accountNumber);
+        editThis.setStatus(neoStatus);
+        this.accountList.remove(accountNumber);
+        this.accountList.put(accountNumber, editThis);
+        log.info("Status of account " + accountNumber + " changed to " + neoStatus);
+    }
+
+    public BankAccount getAccountByNumber(Long seeking) {
+        return this.accountList.get(seeking);
     }
 }

@@ -17,10 +17,10 @@ create an application that simulates simple banking transactions
   - [x] register with a username and password 
   - [x] and apply to open an account.  
   - [x] Customers should be able to apply for joint accounts  
-- [ ] Once the account is open, customers should be able to  
-  - [ ] withdraw,  
-  - [ ] deposit, and  
-  - [ ] transfer funds between accounts  
+- [x] Once the account is open, customers should be able to  
+  - [x] withdraw,  
+  - [x] deposit, and  
+  - [x] transfer funds between accounts  
 - [x] All basic validation should be done, such as  
   - [x] trying to input negative amounts,  
   - [x] overdrawing from accounts etc.  
@@ -30,10 +30,10 @@ create an application that simulates simple banking transactions
   - [x] Account balances  
   - [x] Personal information  
   - [x] approve/deny open applications for accounts  
-- [ ] Bank admins should be able to  
-  - [ ] view and edit all accounts  
+- [x] Bank admins should be able to  
+  - [x] view and edit all accounts  
   - [x] This includes: Approving/denying accounts  
-  - [ ] withdrawing,  
-  - [ ] depositing,  
-  - [ ] transferring from all accounts  
-  - [ ] canceling accounts  
+  - [x] withdrawing,  
+  - [x] depositing,  
+  - [x] transferring from all accounts  
+  - [x] canceling accounts  

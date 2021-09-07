@@ -57,3 +57,37 @@ Logged in as: WageSlave
 2021-09-06 19:46:54,387 INFO c.r.m.d.LoginDriver [main] 
 Logged in as: WageSlave
 2021-09-06 19:49:37,694 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave
+2021-09-06 20:44:51,417 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: KPartridge
+Name: Karen Partridge
+Email: kpartridge@partridge.com
+Access level: CUSTOMER
+2021-09-06 20:45:51,310 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: MPartridge
+Name: Martha Partridge
+Email: martha@partridge.com
+Access level: CUSTOMER
+2021-09-06 20:46:06,577 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: KPartridge
+2021-09-06 20:46:50,129 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 4: savings
+Balance: 0.0
+Owner List: [KPartridge, MPartridge]
+Status: APPLIED
+2021-09-06 20:47:11,568 INFO c.r.m.d.LoginDriver [main] Logged out: KPartridge
+2021-09-06 20:47:23,231 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-06 20:47:38,129 INFO c.r.m.d.AccountApprovalDriver [main] WageSlave approved account 4
+2021-09-06 20:48:06,746 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave
+2021-09-06 20:48:18,230 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: KPartridge
+2021-09-06 20:51:06,981 INFO c.r.m.d.LoginDriver [main] Logged out: KPartridge
+2021-09-06 20:51:30,792 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: KPartridge
+2021-09-06 20:52:26,756 INFO c.r.m.h.BankAccountHandler [main] 1000.0 was deposited into account 4
+2021-09-06 20:52:34,475 INFO c.r.m.d.LoginDriver [main] Logged out: KPartridge
+2021-09-06 20:52:47,190 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-06 20:53:15,484 INFO c.r.m.h.BankAccountHandler [main] 500.0 was withdrawn from account 4
+2021-09-06 20:53:20,672 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
+2021-09-06 20:53:32,264 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-06 20:53:47,599 INFO c.r.m.h.BankAccountHandler [main] 200.0 was deposited into account 4
+2021-09-06 20:53:51,929 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss

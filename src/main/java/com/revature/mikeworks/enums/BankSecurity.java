@@ -31,7 +31,7 @@ public enum BankSecurity {
         } else if (authToCheck == BankSecurity.ADMIN) {
             returnThis = true;
         } else {
-            returnThis = (itemAuth == BankSecurity.EMPLOYEE);
+            returnThis = ((itemAuth == BankSecurity.EMPLOYEE) && (authToCheck == BankSecurity.EMPLOYEE));
         }
 
         return returnThis;
