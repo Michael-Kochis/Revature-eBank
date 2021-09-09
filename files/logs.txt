@@ -147,26 +147,6 @@ java.sql.SQLException: The url cannot be null
 	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
 2021-09-08 10:11:27,794 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
 
-java.sql.SQLException: No suitable driver found for 
-jdbc:postgres://jyovqthopajdts:e0b2604d9ef67ed72c9db60213664e6206356d09497ebfc03b388a83d84dd2f3@ec2-54-156-24-159.compute-1.amazonaws.com:5432/d5h1a22r93okhl
-	at java.sql.DriverManager.getConnection(DriverManager.java:702) ~[java.sql:?]
-	at java.sql.DriverManager.getConnection(DriverManager.java:251) ~[java.sql:?]
-	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
-	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
-	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
-	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
-2021-09-08 10:12:25,517 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
-
-java.sql.SQLException: No suitable driver found for 
-jdbc:postgres://ec2-54-156-24-159.compute-1.amazonaws.com:5432/d5h1a22r93okhl
-	at java.sql.DriverManager.getConnection(DriverManager.java:702) ~[java.sql:?]
-	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
-	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
-	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
-	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
-	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
-2021-09-08 17:45:34,063 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
-
 java.sql.SQLException: The url cannot be null
 	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
 	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
