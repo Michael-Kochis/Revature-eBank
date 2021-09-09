@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class Customer implements Serializable {
     @Getter @Setter private String username;
-    @Getter @Setter private String password;
+    @Getter private PHash password;
     @Getter @Setter private BankSecurity security;
     @Getter @Setter private String firstName;
     @Getter @Setter private String lastName;
@@ -17,6 +17,10 @@ public class Customer implements Serializable {
     public Customer() {
         this.setUsername("");
         this.security = BankSecurity.CUSTOMER;
+    }
+
+    public void setPassword(String raw) {
+        this.password.setPassword(raw);
     }
 
     public boolean isEmployee() {

@@ -91,3 +91,119 @@ Logged in as: MPartridge
 Logged in as: IBDBoss
 2021-09-06 20:53:47,599 INFO c.r.m.h.BankAccountHandler [main] 200.0 was deposited into account 4
 2021-09-06 20:53:51,929 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-08 09:46:28,046 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:43) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-08 09:52:59,832 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:251) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:43) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-08 09:55:46,563 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:251) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:43) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-08 09:56:53,967 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:251) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:34) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:44) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-08 10:02:36,834 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:43) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-08 10:07:33,706 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:43) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-08 10:11:27,794 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: No suitable driver found for 
+jdbc:postgres://jyovqthopajdts:e0b2604d9ef67ed72c9db60213664e6206356d09497ebfc03b388a83d84dd2f3@ec2-54-156-24-159.compute-1.amazonaws.com:5432/d5h1a22r93okhl
+	at java.sql.DriverManager.getConnection(DriverManager.java:702) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:251) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-08 10:12:25,517 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: No suitable driver found for 
+jdbc:postgres://ec2-54-156-24-159.compute-1.amazonaws.com:5432/d5h1a22r93okhl
+	at java.sql.DriverManager.getConnection(DriverManager.java:702) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-08 17:45:34,063 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:43) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 11:51:13,695 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:43) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 11:53:30,425 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:519) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:375) ~[?:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 11:56:56,891 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:519) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:375) ~[?:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
