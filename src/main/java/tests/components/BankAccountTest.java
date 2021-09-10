@@ -1,6 +1,7 @@
 package tests.components;
 
 import com.revature.mikeworks.components.BankAccount;
+import com.revature.mikeworks.enums.BankAccountType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,15 +32,13 @@ class BankAccountTest {
 
     @Test
     void canGetType() {
-        String result = account.getType();
-        assertEquals("checking", result);
+        assertEquals(BankAccountType.CHECKING, account.getType());
     }
 
     @Test
     void canSetTypeToSavings() {
-        String neoType = "savings";
-        account.setType(neoType);
-        assertEquals(neoType, account.getType() );
+        account.setType(BankAccountType.SAVINGS);
+        assertEquals(BankAccountType.SAVINGS, account.getType() );
     }
 
     @Test

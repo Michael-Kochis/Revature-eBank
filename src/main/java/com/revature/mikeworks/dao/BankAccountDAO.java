@@ -1,11 +1,9 @@
 package com.revature.mikeworks.dao;
 
 import com.revature.mikeworks.components.BankAccount;
-import com.revature.mikeworks.components.Customer;
 import com.revature.mikeworks.dao.interfaces.iBankAccountDAO;
 import com.revature.mikeworks.enums.BankAccountStatus;
 import com.revature.mikeworks.enums.BankAccountType;
-import com.revature.mikeworks.enums.BankSecurity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,7 +14,6 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 public class BankAccountDAO implements iBankAccountDAO {
-    public final String filePath = "./files/accounts.txt";
     private static final Connection conn = JDBCConnector.getConn();
     private static final Logger log = LogManager.getLogger(BankAccountDAO.class);
 
@@ -33,7 +30,7 @@ public class BankAccountDAO implements iBankAccountDAO {
     }
 
     public HashMap<Long, BankAccount> readAccounts() {
-        HashMap<Long, BankAccount> returnThis = new HashMap<Long, BankAccount>();
+        HashMap<Long, BankAccount> returnThis = new HashMap<>();
 
         try {
             PreparedStatement st = conn.prepareStatement("SELECT * FROM CUSTOMERS");
@@ -48,7 +45,7 @@ public class BankAccountDAO implements iBankAccountDAO {
                         neoID,
                         BankAccountType.fromInt(neoType),
                         BankAccountStatus.fromInt(neoStatus),
-                        (double)neoBal
+                        neoBal
                 );
                 returnThis.put(neoAcct.getAccountNumber(), neoAcct);
             }
@@ -67,7 +64,17 @@ public class BankAccountDAO implements iBankAccountDAO {
 
     @Override
     public void writeAccount(BankAccount input) {
+        try {
+            PreparedStatement st = conn.prepareStatement("INSERT INTO ACCOUNTS VALUES (?, ?, ?, ?)");
+            st.setLong(1, input.getAccountNumber());
+            st.setInt(2, BankAccountType.toInt(input.getType()) );
+            st.setInt(3, BankAccountStatus.toInt(input.getStatus()) );
+            st.setDouble(4, input.getBalance());
 
+            st.execute();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
+        }
     }
 
     public void writeAccounts(HashMap<Long, BankAccount> input) {

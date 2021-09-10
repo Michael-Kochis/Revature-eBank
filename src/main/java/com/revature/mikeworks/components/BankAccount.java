@@ -12,7 +12,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.Serializable;
 import java.util.TreeSet;
 
-@NoArgsConstructor
 public class BankAccount implements Serializable {
     private static final Logger log = LogManager.getLogger(BankAccount.class);
     private static final CustomerHandler cHandler = BankData.getCHandler();
@@ -21,6 +20,11 @@ public class BankAccount implements Serializable {
     @Getter @Setter private double balance;
     @Getter @Setter private long accountNumber;
     @Getter @Setter private BankAccountStatus status;
+
+    public BankAccount() {
+        this.setType(BankAccountType.CHECKING);
+        this.setStatus(BankAccountStatus.APPLIED);
+    }
 
     public BankAccount(long num, BankAccountType nType, BankAccountStatus nStatus, double nBal) {
         this.setAccountNumber(num);

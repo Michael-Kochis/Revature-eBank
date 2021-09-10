@@ -1,6 +1,7 @@
 package tests.handlers;
 
 import com.revature.mikeworks.components.BankAccount;
+import com.revature.mikeworks.enums.BankAccountType;
 import com.revature.mikeworks.handlers.BankAccountHandler;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -57,20 +58,6 @@ class BankAccountHandlerTest {
         handler.add(neoAcct);
 
         assertEquals(expect, handler.size());
-    }
-
-    @Test
-    void savesAndLoads() {
-        BankAccount neoAcct = new BankAccount();
-        neoAcct.setBalance(1000.00);
-        neoAcct.setType("checking");
-        neoAcct.setAccountNumber(1L);
-        handler.add(neoAcct);
-
-        handler.saveAll();
-        handler.loadAll();
-
-        assertTrue(handler.contains(neoAcct));
     }
 
 }
