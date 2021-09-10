@@ -82,7 +82,7 @@ public class RegisterDriver {
     private static void processRegister() {
         if (validRegisterMe()) {
             cHandler.add(registerMe);
-            CustomerDAO.writeCustomer(registerMe);
+            cHandler.writeCustomer(registerMe);
             log.info("New Customer registered: " + registerMe);
             registerMe = new Customer();
         } else {

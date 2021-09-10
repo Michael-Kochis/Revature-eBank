@@ -32,18 +32,32 @@ public class CustomerDirectoryDriver {
         }
     }
 
+    private void doUpdateEmail() {
+        System.out.println("Enter your new email");
+        String neoMail = scan.readString();
+        BankData.getWhoAmI().setEmail(neoMail);
+        cHandler.writeCustomer(BankData.getWhoAmI());
+    }
+
+    private void doUpdateLastName() {
+        System.out.println("Enter your new last name");
+        String neoName = scan.readString();
+        BankData.getWhoAmI().setLastName(neoName);
+        cHandler.writeCustomer(BankData.getWhoAmI());
+    }
+
     private void doUpdateFirstName() {
-        System.out.println("Enter your new user name");
+        System.out.println("Enter your new first name");
         String neoName = scan.readString();
         BankData.getWhoAmI().setFirstName(neoName);
-        CustomerDAO.writeCustomer(BankData.getWhoAmI());
+        cHandler.writeCustomer(BankData.getWhoAmI());
     }
 
     private void doUpdatePassword() {
         System.out.println("Enter your new password");
         String neoPass = scan.readString();
         BankData.getWhoAmI().setPassword(neoPass);
-        CustomerDAO.writeCustomer(BankData.getWhoAmI());
+        cHandler.writeCustomer(BankData.getWhoAmI());
     }
 
     private void doUpdateUsername() {
@@ -53,7 +67,7 @@ public class CustomerDirectoryDriver {
             System.out.println("That name is taken.");
         } else {
             BankData.getWhoAmI().setUsername(neoName);
-            CustomerDAO.writeCustomer(BankData.getWhoAmI());
+            cHandler.writeCustomer(BankData.getWhoAmI());
         }
     }
 }

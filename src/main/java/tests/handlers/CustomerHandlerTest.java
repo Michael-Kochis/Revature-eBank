@@ -72,7 +72,7 @@ class CustomerHandlerTest {
         neoCust.setLastName("Boss");
         handler.add(neoCust);
 
-        CustomerDAO.writeCustomer(neoCust);
+        handler.writeCustomer(neoCust);
         handler.loadAll();
 
         assertTrue(handler.contains(neoCust));

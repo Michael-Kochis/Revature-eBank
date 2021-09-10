@@ -2,6 +2,7 @@ package com.revature.mikeworks.dao;
 
 import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.components.Customer;
+import com.revature.mikeworks.dao.interfaces.iCustomerDAO;
 import com.revature.mikeworks.enums.BankSecurity;
 import com.revature.mikeworks.handlers.CustomerHandler;
 import org.apache.logging.log4j.LogManager;
@@ -14,9 +15,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
-public class CustomerDAO {
+public class CustomerDAO implements iCustomerDAO {
     private static Connection conn = JDBCConnector.getConn();
     private static final Logger log = LogManager.getLogger(CustomerDAO.class);
+
+    public void deleteCustomer(Customer toDelete) {
+        try {
+            PreparedStatement st = conn.prepareStatement("DELETE FROM CUSTOMERS WHERE PERSONID = ?");
+            st.setInt(1, toDelete.getPersonID());
+
+            st.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public HashMap<String, Customer> readCustomers() {
         HashMap<String, Customer> returnThis = new HashMap<String, Customer>();
@@ -49,7 +62,7 @@ public class CustomerDAO {
         return returnThis;
     }
 
-    public static void updateCustomer(String username) {
+    public void updateCustomer(String username) {
         CustomerHandler cHandler = BankData.getCHandler();
         Customer saveMe = cHandler.getCustomerByUsername(username);
 
@@ -71,7 +84,7 @@ public class CustomerDAO {
         }
     }
 
-    public static void writeCustomer(Customer input) {
+    public void writeCustomer(Customer input) {
         try {
                 PreparedStatement st = conn.prepareStatement("INSERT INTO CUSTOMERS VALUES (?, ?, ?, ?, ?, ?, ?)");
                 st.setInt(1, input.getPersonID());

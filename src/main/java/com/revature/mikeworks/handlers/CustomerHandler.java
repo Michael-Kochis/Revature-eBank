@@ -162,7 +162,10 @@ public class CustomerHandler implements Serializable {
 
     public void updateCustomer(int personID) {
         Customer toUpdate = this.getCustomerByID(personID);
-        CustomerDAO.updateCustomer(toUpdate.getUsername());
+        dao.updateCustomer(toUpdate.getUsername());
     }
 
+    public void writeCustomer(Customer neoCust) {
+        dao.writeCustomer(neoCust);
+    }
 }
