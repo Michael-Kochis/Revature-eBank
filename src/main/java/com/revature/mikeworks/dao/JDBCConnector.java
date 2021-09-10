@@ -31,11 +31,11 @@ public class JDBCConnector {
 
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            //DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
             conn = DriverManager.getConnection(url, root, passwd);
             log.trace("New connection to database established.");
         } catch (Exception e) {
             log.fatal("Error accessing database\n", e);
+
         }
     }
 
@@ -48,6 +48,7 @@ public class JDBCConnector {
 
             if (rs.next()) {
                 log.trace("Database connection established and tested");
+                System.out.println(rs.getString("message"));
             }
             rs.close();
         } catch (SQLException e) {

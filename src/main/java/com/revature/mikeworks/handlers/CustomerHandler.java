@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CustomerHandler implements Serializable {
+    private static int nextID;
     @Getter private HashMap<String, Customer> customerList;
     final static CustomerDAO dao = new CustomerDAO();
     private static final Logger log = LogManager.getLogger(CustomerHandler.class);
@@ -21,10 +22,16 @@ public class CustomerHandler implements Serializable {
         this.customerList = new HashMap<>();
     }
 
+    public static int getNextID() {
+        CustomerHandler.nextID += 1;
+        return CustomerHandler.nextID;
+    }
+
     public void add(Customer neoCust) {
         if (this.contains(neoCust)) {
             System.out.println("Duplicate user cannot be added: " + neoCust);
         } else {
+            neoCust.setPersonID(CustomerHandler.getNextID());
             this.customerList.put(neoCust.getUsername(), neoCust);
         }
     }
@@ -35,10 +42,11 @@ public class CustomerHandler implements Serializable {
 
     public void loadAll() {
         this.customerList = dao.readCustomers();
-    }
-
-    public void saveAll() {
-        dao.writeCustomers(this.customerList);
+        for (Customer cust: this.customerList.values()) {
+            int neoValue = cust.getPersonID();
+            if (neoValue > CustomerHandler.nextID)
+                CustomerHandler.nextID = neoValue;
+        }
     }
 
     public int size() {
@@ -56,11 +64,20 @@ public class CustomerHandler implements Serializable {
     public boolean canLogIn(String uname, String pass) {
         Customer testMyPassword = this.getCustomerByUsername(uname);
 
-        return (pass.equals(testMyPassword.getPassword()) );
+        return (testMyPassword.getPassword().checkPassword(pass) );
     }
 
     public Customer getCustomerByUsername(String username) {
         return this.customerList.get(username);
+    }
+
+    private Customer getCustomerByID(int personID) {
+        for (Customer check: this.customerList.values()) {
+            if (check.getPersonID() == personID) {
+                return check;
+            }
+        }
+        return null;
     }
 
     public void showAll() {
@@ -142,4 +159,10 @@ public class CustomerHandler implements Serializable {
             log.error("Attempt to edit non-existant user: " + username);
         }
     }
+
+    public void updateCustomer(int personID) {
+        Customer toUpdate = this.getCustomerByID(personID);
+        CustomerDAO.updateCustomer(toUpdate.getUsername());
+    }
+
 }

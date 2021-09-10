@@ -23,7 +23,7 @@ public class PHash {
     }
 
     /** Only for use when loading values from persistent storage. */
-    private void setHash(String s) {
+    protected void setHash(String s) {
         this.pwHash = s;
     }
 

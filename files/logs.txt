@@ -147,27 +147,7 @@ java.sql.SQLException: The url cannot be null
 	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
 2021-09-08 10:11:27,794 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
 
-java.sql.SQLException: No suitable driver found for 
-jdbc:postgres://jyovqthopajdts:e0b2604d9ef67ed72c9db60213664e6206356d09497ebfc03b388a83d84dd2f3@ec2-54-156-24-159.compute-1.amazonaws.com:5432/d5h1a22r93okhl
-	at java.sql.DriverManager.getConnection(DriverManager.java:702) ~[java.sql:?]
-	at java.sql.DriverManager.getConnection(DriverManager.java:251) ~[java.sql:?]
-	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
-	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
-	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
-	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
-2021-09-08 10:12:25,517 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
-
-java.sql.SQLException: No suitable driver found for 
-jdbc:postgres://ec2-54-156-24-159.compute-1.amazonaws.com:5432/d5h1a22r93okhl
-	at java.sql.DriverManager.getConnection(DriverManager.java:702) ~[java.sql:?]
-	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
-	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
-	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
-	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
-	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
-2021-09-08 17:45:34,063 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
-
-java.sql.SQLException: The url cannot be null
+jjava.sql.SQLException: The url cannot be null
 	at java.sql.DriverManager.getConnection(DriverManager.java:660) ~[java.sql:?]
 	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
 	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
@@ -207,3 +187,388 @@ java.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver
 	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
 	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
 	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 15:42:17,482 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.lang.ClassNotFoundException: oracle.jdbc.OracleDriver
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:519) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:375) ~[?:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 15:48:11,275 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.lang.ClassNotFoundException: oracle.jdbc.OracleDriver
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:519) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:375) ~[?:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:33) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:46) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 15:51:22,233 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.lang.ClassNotFoundException: oracle.jdbc.OracleDriver
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:519) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:375) ~[?:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:36) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:25) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:49) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 15:53:07,039 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.lang.ClassNotFoundException: oracle.jdbc.OracleDriver
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:519) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:375) ~[?:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:34) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:48) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:07:29,342 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:38) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:48) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:08:16,848 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:36) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:46) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:08:43,749 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:10:16,992 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:11:01,090 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:13:34,413 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:17:59,367 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:24:37,315 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:25:41,186 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:28:30,761 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:29:00,872 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.driver.OracleDriver.parseExtensionType(OracleDriver.java:793) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:645) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:602) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 16:31:09,044 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLRecoverableException: IO Error: Invalid number format for port number
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:878) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:807) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:77) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:767) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:572) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+Caused by: oracle.net.ns.NetException: Invalid number format for port number
+	at oracle.net.resolver.HostnameNamingAdapter.resolve(HostnameNamingAdapter.java:207) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.NameResolver.resolveName(NameResolver.java:143) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:547) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:719) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:333) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1640) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:610) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	... 10 more
+2021-09-09 16:32:04,464 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLRecoverableException: IO Error: Invalid number format for port number
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:878) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:807) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:77) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:767) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:572) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+Caused by: oracle.net.ns.NetException: Invalid number format for port number
+	at oracle.net.resolver.HostnameNamingAdapter.resolve(HostnameNamingAdapter.java:207) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.NameResolver.resolveName(NameResolver.java:143) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:547) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:719) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:333) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1640) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:610) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	... 10 more
+2021-09-09 16:33:34,248 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLRecoverableException: IO Error: Unknown host specified 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:878) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:807) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:77) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:767) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:572) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+Caused by: oracle.net.ns.NetException: Unknown host specified 
+	at oracle.net.resolver.HostnameNamingAdapter.resolve(HostnameNamingAdapter.java:211) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.NameResolver.resolveName(NameResolver.java:143) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:547) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:719) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:333) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1640) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:610) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	... 10 more
+2021-09-09 16:34:54,718 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLRecoverableException: IO Error: Unknown host specified 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:878) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:807) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:77) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:767) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:572) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:37) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+Caused by: oracle.net.ns.NetException: Unknown host specified 
+	at oracle.net.resolver.HostnameNamingAdapter.resolve(HostnameNamingAdapter.java:211) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.NameResolver.resolveName(NameResolver.java:143) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:547) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:719) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:333) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1640) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:610) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	... 10 more
+2021-09-09 16:43:32,451 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.lang.ClassNotFoundException: oracle.ojdbc.OracleDriver
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:519) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:375) ~[?:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:34) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:47) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+
+
+2021-09-09 17:06:28,512 WARN c.r.m.d.JDBCConnector [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:372) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:51) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 17:07:35,743 WARN c.r.m.d.JDBCConnector [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:372) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:52) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+2021-09-09 17:09:52,179 FATAL c.r.m.d.JDBCConnector [main] Error accessing database
+
+java.sql.SQLRecoverableException: IO Error: Unknown host specified 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:878) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:807) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:77) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:767) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:572) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at com.revature.mikeworks.dao.JDBCConnector.setConn(JDBCConnector.java:34) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.getConn(JDBCConnector.java:24) [classes/:?]
+	at com.revature.mikeworks.dao.JDBCConnector.testDatabase(JDBCConnector.java:45) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:8) [classes/:?]
+Caused by: oracle.net.ns.NetException: Unknown host specified 
+	at oracle.net.resolver.HostnameNamingAdapter.resolve(HostnameNamingAdapter.java:211) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.NameResolver.resolveName(NameResolver.java:143) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:547) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:719) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:333) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1640) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:610) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	... 10 more
+2021-09-09 18:38:41,937 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: IBDBoss
+Name: Bigg Boss
+Email: big.boss@ebank.com
+Access level: CUSTOMER
+2021-09-09 18:40:10,392 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: IBDBoss
+Name: Big Boss
+Email: big.boss@ebank.com
+Access level: CUSTOMER
+2021-09-09 18:45:39,727 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-09 18:45:45,153 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-09 20:01:08,564 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: WageSlave
+Name: Wage Slave
+Email: wage.slave@ebank.com
+Access level: CUSTOMER
+2021-09-09 20:01:19,998 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-09 20:01:48,160 INFO c.r.m.h.CustomerHandler [main] User WageSlave now has authorization level employee
+2021-09-09 20:01:54,022 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-09 20:03:05,212 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: WageSlavwe
+Name: Wage Slave
+Email: wage.slave@ebank.com
+Access level: CUSTOMER
+2021-09-09 20:03:20,681 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-09 20:03:35,897 WARN c.r.m.d.CustomerEditDriver [main] User not found by username: WageSlave
+2021-09-09 20:03:44,868 INFO c.r.m.h.CustomerHandler [main] User IBDBoss now has authorization level employee
+2021-09-09 20:03:49,787 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-09 20:10:19,567 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: WageSlave
+Name: Wage Slave
+Email: wage.slave@ebank.com
+Access level: CUSTOMER
+2021-09-09 20:10:31,240 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-09 20:10:44,642 INFO c.r.m.h.CustomerHandler [main] User WageSlave now has authorization level employee
+2021-09-09 20:10:48,351 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-09 20:29:15,800 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-09 20:29:39,034 INFO c.r.m.h.CustomerHandler [main] User WageSlave now has authorization level employee
+2021-09-09 20:29:44,831 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-09 20:31:28,057 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: Neo
+Name: Neo Lestrange
+Email: Neo@theone.net
+Access level: CUSTOMER
+2021-09-09 20:31:46,072 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: Neo
+2021-09-09 20:32:11,640 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 5: checking
+Balance: 0.0
+Owner List: [Neo]
+Status: APPLIED
+2021-09-09 20:32:16,831 INFO c.r.m.d.LoginDriver [main] Logged out: Neo
+2021-09-09 20:42:38,357 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: MPartridge
+Name: Martha Partridge
+Email: martha@partridge.fam
+Access level: CUSTOMER
+2021-09-09 20:43:22,784 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: SPartridge
+Name: Stacy Partridge
+Email: stacy@partridge.fam
+Access level: CUSTOMER
+2021-09-09 20:45:37,555 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: SPartridge
+Name: Stacy Partridge
+Email: stacy@partridge.fam
+Access level: CUSTOMER
+2021-09-09 20:52:55,166 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: Neo
+2021-09-09 21:04:57,857 INFO c.r.m.d.LoginDriver [main] Logged out: Neo

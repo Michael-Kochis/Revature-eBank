@@ -75,6 +75,7 @@ public class CustomerEditDriver {
         System.out.println("Enter desired new user name:");
         String neoName = scan.readString();
         cHandler.updateName(target.getUsername(), neoName);
+        cHandler.updateCustomer(target.getPersonID());
     }
 
     private void doSelectTarget() {
@@ -94,33 +95,39 @@ public class CustomerEditDriver {
 
     private void doPromoteAdmin() {
         cHandler.changeAuth(target.getUsername(), BankSecurity.ADMIN);
+        cHandler.updateCustomer(target.getPersonID());
     }
 
     private void doMakeEmployee() {
         cHandler.changeAuth(target.getUsername(), BankSecurity.EMPLOYEE);
+        cHandler.updateCustomer(target.getPersonID());
     }
 
     private void doUpdatePassword() {
         System.out.println("Enter new password:");
         String neoPass = scan.readString();
         cHandler.updatePassword(target.getUsername(), neoPass);
+        cHandler.updateCustomer(target.getPersonID());
     }
 
     private void doUpdateFirstName() {
         System.out.println("Enter new first name:");
         String neoFirst = scan.readString();
         cHandler.updateFirstName(target.getUsername(), neoFirst);
+        cHandler.updateCustomer(target.getPersonID());
     }
 
     private void doUpdateLastName() {
         System.out.println("Enter new last name:");
         String neoLast = scan.readString();
         cHandler.updateLastName(target.getUsername(), neoLast);
+        cHandler.updateCustomer(target.getPersonID());
     }
 
     private void doUpdateEmail() {
         System.out.println("Enter new email address:");
         String neoEmail = scan.readString();
         cHandler.updateEmail(target.getUsername(), neoEmail);
+        cHandler.updateCustomer(target.getPersonID());
     }
 }

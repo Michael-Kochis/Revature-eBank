@@ -3,7 +3,7 @@ package com.revature.mikeworks.enums;
 public enum BankSecurity {
     CUSTOMER, EMPLOYEE, ADMIN;
 
-     public int toInt(BankSecurity value) {
+     public static int toInt(BankSecurity value) {
         if (value == BankSecurity.CUSTOMER) {
             return 1;
         } else if (value == BankSecurity.EMPLOYEE) {
@@ -15,7 +15,7 @@ public enum BankSecurity {
         }
     }
 
-    public BankSecurity fromInt(int level) {
+    public static BankSecurity fromInt(int level) {
         switch (level) {
             case (3): return BankSecurity.ADMIN;
             case (2): return BankSecurity.EMPLOYEE;
@@ -55,4 +55,7 @@ public enum BankSecurity {
 
     }
 
+    public int toInt() {
+         return BankSecurity.toInt(this);
+    }
 }

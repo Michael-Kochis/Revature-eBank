@@ -65,7 +65,7 @@ class CustomerTest {
 
     @Test
     void userHasUsername() {
-        assertNull(person.getUsername());
+        assertNotNull(person.getUsername());
     }
 
     @Test
@@ -77,16 +77,11 @@ class CustomerTest {
     }
 
     @Test
-    void userHasPassword() {
-        assertNull(person.getPassword());
-    }
-
-    @Test
     void passwordCanBeSet() {
         String neoPass = "BadPasswordChoice";
 
         person.setPassword(neoPass);
-        assertEquals(neoPass, person.getPassword());
+        assertTrue(person.getPassword().checkPassword(neoPass));
     }
 
     @Test

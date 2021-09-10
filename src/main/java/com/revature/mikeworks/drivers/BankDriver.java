@@ -15,16 +15,6 @@ public class BankDriver {
 
     private static void setup() {
         cHandler.loadAll();
-//        BankAccountHandler baHandler = new BankAccountHandler();
-//        BankAccount blank = new BankAccount();
-//        blank.setAccountNumber(1L);
-//        blank.addOwner("IBDBoss");
-//        baHandler.add(blank);
-//        baHandler.saveAll();
-    }
-
-    private static void teardown() {
-        cHandler.saveAll();
     }
 
     private static void mainStep(int next) {
@@ -44,6 +34,5 @@ public class BankDriver {
             input = mc.readOption();
             BankDriver.mainStep(input);
         }
-        teardown();
     }
 }

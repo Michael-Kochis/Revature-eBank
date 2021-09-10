@@ -1,6 +1,7 @@
 package tests.handlers;
 
 import com.revature.mikeworks.components.Customer;
+import com.revature.mikeworks.dao.CustomerDAO;
 import com.revature.mikeworks.enums.BankSecurity;
 import com.revature.mikeworks.handlers.CustomerHandler;
 import org.junit.jupiter.api.AfterEach;
@@ -71,7 +72,7 @@ class CustomerHandlerTest {
         neoCust.setLastName("Boss");
         handler.add(neoCust);
 
-        handler.saveAll();
+        CustomerDAO.writeCustomer(neoCust);
         handler.loadAll();
 
         assertTrue(handler.contains(neoCust));
