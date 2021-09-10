@@ -3,7 +3,7 @@ package com.revature.mikeworks.enums;
 public enum BankAccountStatus {
     APPLIED, APPROVED, REJECTED, OPEN, CLOSED;
 
-    public  int toInt(BankAccountStatus status) {
+    public static int toInt(BankAccountStatus status) {
         if (status == APPROVED) {
             return 2;
         } else if (status == REJECTED) {
