@@ -17,7 +17,7 @@ public enum BankAccountStatus {
         }
     }
 
-    public  BankAccountStatus fromInt(int value) {
+    public static BankAccountStatus fromInt(int value) {
         switch (value) {
             case (2): return APPROVED;
             case (3): return REJECTED;

@@ -5,7 +5,6 @@ import com.revature.mikeworks.components.Customer;
 import com.revature.mikeworks.controllers.CentralMenuController;
 import com.revature.mikeworks.enums.BankSecurity;
 import com.revature.mikeworks.handlers.BankAccountHandler;
-import com.revature.mikeworks.handlers.CustomerHandler;
 
 public class BankUserDriver {
     private static final CentralMenuController cmc = new CentralMenuController();
@@ -45,7 +44,7 @@ public class BankUserDriver {
             case (2) -> processBankAccountOptionsMenu();
             case (3) -> processViewCustomerInformation();
             case (4) -> processApproveDenyAccounts();
-            case (5) -> proessEditProfiles();
+            case (5) -> processEditProfiles();
             case (6) -> processEditBankAccounts();
             default -> { looping = false; }
         }
@@ -57,7 +56,7 @@ public class BankUserDriver {
         }
     }
 
-    private static void proessEditProfiles() {
+    private static void processEditProfiles() {
         if (BankSecurity.authEqualOrGreater(BankSecurity.ADMIN, whoAmI.getSecurity())) {
             ceDriver.doMain();
         }

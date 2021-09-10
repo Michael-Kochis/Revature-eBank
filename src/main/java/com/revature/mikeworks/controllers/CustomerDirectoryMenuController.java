@@ -20,7 +20,7 @@ public class CustomerDirectoryMenuController {
             cdm.showMenu(auth);
             System.out.println("Input your choice");
             input = scan.readInt();
-        } while (input < 0 || input > 6);
+        } while (input < 0 || input > 5);
 
         return input;
     }

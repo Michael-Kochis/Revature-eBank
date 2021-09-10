@@ -1,8 +1,10 @@
 package com.revature.mikeworks.components;
 
 import com.revature.mikeworks.enums.BankAccountStatus;
+import com.revature.mikeworks.enums.BankAccountType;
 import com.revature.mikeworks.handlers.CustomerHandler;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,21 +12,21 @@ import org.apache.logging.log4j.Logger;
 import java.io.Serializable;
 import java.util.TreeSet;
 
+@NoArgsConstructor
 public class BankAccount implements Serializable {
-    private static Logger log = LogManager.getLogger(BankAccount.class);
+    private static final Logger log = LogManager.getLogger(BankAccount.class);
     private static final CustomerHandler cHandler = BankData.getCHandler();
-    private String type = "checking";
-    private TreeSet<String> owner = new TreeSet<String>();
+    @Getter @Setter private BankAccountType type;
+    private TreeSet<String> owner = new TreeSet<>();
     @Getter @Setter private double balance;
     @Getter @Setter private long accountNumber;
     @Getter @Setter private BankAccountStatus status;
 
-    public String getType() {
-        return this.type;
-    }
-
-    public void setType(String newType) {
-        this.type = newType;
+    public BankAccount(long num, BankAccountType nType, BankAccountStatus nStatus, double nBal) {
+        this.setAccountNumber(num);
+        this.setType(nType);
+        this.setStatus(nStatus);
+        this.setBalance(nBal);
     }
 
     public void addOwner(String neoOwner) {
@@ -50,9 +52,9 @@ public class BankAccount implements Serializable {
         returnThis.append(": ");
         returnThis.append(this.type);
         returnThis.append("\n");
-        returnThis.append("Balance: " + this.getBalance() + "\n");
-        returnThis.append("Owner List: " + this.owner.toString() +"\n");
-        returnThis.append("Status: " + this.getStatus() );
+        returnThis.append("Balance: ").append(this.getBalance() ).append("\n");
+        returnThis.append("Owner List: ").append(this.owner.toString() ).append("\n");
+        returnThis.append("Status: ").append(this.getStatus() );
 
         return returnThis.toString();
     }

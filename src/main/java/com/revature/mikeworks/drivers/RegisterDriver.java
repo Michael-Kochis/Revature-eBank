@@ -3,6 +3,7 @@ package com.revature.mikeworks.drivers;
 import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.components.Customer;
 import com.revature.mikeworks.controllers.RegisterMenuController;
+import com.revature.mikeworks.dao.CustomerDAO;
 import com.revature.mikeworks.handlers.CustomerHandler;
 import com.revature.mikeworks.utils.ValidScanner;
 import org.apache.logging.log4j.LogManager;
@@ -81,6 +82,7 @@ public class RegisterDriver {
     private static void processRegister() {
         if (validRegisterMe()) {
             cHandler.add(registerMe);
+            cHandler.writeCustomer(registerMe);
             log.info("New Customer registered: " + registerMe);
             registerMe = new Customer();
         } else {

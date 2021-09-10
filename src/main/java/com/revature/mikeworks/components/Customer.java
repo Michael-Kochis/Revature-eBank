@@ -6,7 +6,8 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-public class Customer implements Serializable {
+public class Customer  {
+    @Getter @Setter private int personID;
     @Getter @Setter private String username;
     @Getter private PHash password;
     @Getter @Setter private BankSecurity security;
@@ -16,7 +17,24 @@ public class Customer implements Serializable {
 
     public Customer() {
         this.setUsername("");
+        this.password =  new PHash();
         this.security = BankSecurity.CUSTOMER;
+    }
+
+    public Customer(int neoID, String neoName, String neoFirst, String neoLast, String neoEmail, BankSecurity neoSec) {
+        this.personID = neoID;
+        this.username = neoName;
+        this.password = new PHash();
+        this.firstName = neoFirst;
+        this.lastName = neoLast;
+        this.email = neoEmail;
+        this.security = neoSec;
+    }
+
+    public void setHash(String neoHash) {
+        if (this.password == null)
+            this.password = new PHash();
+        this.password.setHash(neoHash);
     }
 
     public void setPassword(String raw) {

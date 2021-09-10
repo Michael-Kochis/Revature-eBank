@@ -4,6 +4,7 @@ import com.revature.mikeworks.components.BankAccount;
 import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.controllers.BankAccountApplyMenuController;
 import com.revature.mikeworks.enums.BankAccountStatus;
+import com.revature.mikeworks.enums.BankAccountType;
 import com.revature.mikeworks.handlers.BankAccountHandler;
 import com.revature.mikeworks.utils.ValidScanner;
 import org.apache.logging.log4j.LogManager;
@@ -65,9 +66,9 @@ public class BankAccountApplyDriver {
 
     private void doTypeChange() {
         if (neoAccount.getType().equals("checking")) {
-            neoAccount.setType("savings");
+            neoAccount.setType(BankAccountType.SAVINGS);
         } else {
-            neoAccount.setType("checking");
+            neoAccount.setType(BankAccountType.CHECKING);
         }
     }
 }
