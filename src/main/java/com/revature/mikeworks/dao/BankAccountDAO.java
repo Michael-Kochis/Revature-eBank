@@ -1,9 +1,12 @@
 package com.revature.mikeworks.dao;
 
+import com.revature.mikeworks.components.AccountOwner;
 import com.revature.mikeworks.components.BankAccount;
+import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.dao.interfaces.iBankAccountDAO;
 import com.revature.mikeworks.enums.BankAccountStatus;
 import com.revature.mikeworks.enums.BankAccountType;
+import com.revature.mikeworks.handlers.BankAccountHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,10 +15,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.Map;
 
 public class BankAccountDAO implements iBankAccountDAO {
     private static final Connection conn = JDBCConnector.getConn();
     private static final Logger log = LogManager.getLogger(BankAccountDAO.class);
+    private static final BankAccountHandler baHandler = BankData.getBaHandler();
 
     @Override
     public void deleteAccount(BankAccount toDelete) {
@@ -26,6 +31,20 @@ public class BankAccountDAO implements iBankAccountDAO {
             st.execute();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    public HashMap<String, AccountOwner> readAccountOwners() {
+        AccountOwnerDAO aoDAO = new AccountOwnerDAO();
+        return aoDAO.readAccountOwners();
+    }
+
+    private void assignAccountOwners() {
+        HashMap<String, AccountOwner> tempAO = readAccountOwners();
+
+        for (Map.Entry<String, AccountOwner> ao: tempAO.entrySet()) {
+            BankAccount target = baHandler.findAccountByID(ao.getValue().getAccountID());
+            target.addOwner(ao.getKey(), ao.getValue());
         }
     }
 
@@ -47,6 +66,8 @@ public class BankAccountDAO implements iBankAccountDAO {
                         BankAccountStatus.fromInt(neoStatus),
                         neoBal
                 );
+                assignAccountOwners();
+
                 returnThis.put(neoAcct.getAccountNumber(), neoAcct);
             }
             rs.close();
@@ -57,9 +78,24 @@ public class BankAccountDAO implements iBankAccountDAO {
         return returnThis;
     }
 
-    @Override
-    public void updateAccount(Long accountNumber) {
+    public void updateAccount(BankAccount updateMe) {
+        try {
+            PreparedStatement st = conn.prepareStatement("UPDATE ACCOUNTS SET " +
+                    "TYPE = ?, STATUS = ?, BALANCE = ? WHERE ACCOUNTID = ?");
+            st.setInt(1, BankAccountType.toInt(updateMe.getType()) );
+            st.setInt(2, BankAccountStatus.toInt(updateMe.getStatus()) );
+            st.setDouble(3, updateMe.getBalance() );
+            st.setLong(4, updateMe.getAccountNumber());
 
+            st.executeUpdate();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+    @Override
+    public void updateAccount(Long accountID) {
+        this.updateAccount(baHandler.getAccountByNumber(accountID) );
     }
 
     @Override

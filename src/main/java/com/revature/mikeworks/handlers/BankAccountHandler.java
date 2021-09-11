@@ -1,7 +1,9 @@
 package com.revature.mikeworks.handlers;
 
+import com.revature.mikeworks.components.AccountOwner;
 import com.revature.mikeworks.components.BankAccount;
 import com.revature.mikeworks.components.BankData;
+import com.revature.mikeworks.dao.AccountOwnerDAO;
 import com.revature.mikeworks.dao.BankAccountDAO;
 import com.revature.mikeworks.enums.BankAccountStatus;
 import lombok.Getter;
@@ -14,10 +16,12 @@ public class BankAccountHandler {
     private static long nextAccountNumber;
     @Getter private HashMap<Long, BankAccount> accountList;
     private static final BankAccountDAO dao = new BankAccountDAO();
+    private static final AccountOwnerDAO daoAO = new AccountOwnerDAO();
+    private static final CustomerHandler cHandler = BankData.getCHandler();
     private static final Logger log = LogManager.getLogger(BankAccountHandler.class);
 
     public BankAccountHandler() {
-        this.accountList = new HashMap<Long, BankAccount>();
+        this.accountList = new HashMap<>();
     }
 
     public void add(BankAccount neoAccount) {
@@ -25,6 +29,9 @@ public class BankAccountHandler {
             System.out.println("Cannot Add duplicate account " +  neoAccount);
         } else {
             this.accountList.put(neoAccount.getAccountNumber(), neoAccount);
+            for (AccountOwner ao: neoAccount.getOwner().values()) {
+                daoAO.writeAccountOwner(ao);
+            }
         }
     }
 
@@ -56,7 +63,7 @@ public class BankAccountHandler {
     public void showMyAccounts() {
         String thisUser = BankData.getWhoAmI().getUsername();
         for (BankAccount entry : this.accountList.values()) {
-            if (entry.getOwner().contains(thisUser)) {
+            if (entry.getOwner().containsKey(thisUser)) {
                 System.out.println(entry);
                 System.out.println();
             }
@@ -159,7 +166,7 @@ public class BankAccountHandler {
 
     public boolean isMyAccount(Long seeking, String username) {
         BankAccount checkThis = this.accountList.get(seeking);
-        return checkThis.getOwner().contains(username);
+        return checkThis.getOwner().containsKey(username);
     }
 
     public void updateStatus(long accountNumber, BankAccountStatus neoStatus) {
@@ -172,5 +179,23 @@ public class BankAccountHandler {
 
     public BankAccount getAccountByNumber(Long seeking) {
         return this.accountList.get(seeking);
+    }
+
+    public BankAccount findAccountByID(Long accountID) {
+        return getAccountByNumber(accountID);
+    }
+
+    public void addOwnerRecord(AccountOwner newAO) {
+        daoAO.writeAccountOwner(newAO);
+    }
+
+    public void addOwnerRecord(long personID, long accountNumber) {
+        AccountOwner neo = new AccountOwner();
+        neo.setBankID(AccountOwnerDAO.getNextNumber()) ;
+        neo.setOwnerID(personID);
+        neo.setAccountID(accountNumber);
+        String ownerName = cHandler.getCustomerByID(personID).getUsername();
+        addOwnerRecord(neo);
+        getAccountByNumber(accountNumber).addOwner(ownerName, neo);
     }
 }

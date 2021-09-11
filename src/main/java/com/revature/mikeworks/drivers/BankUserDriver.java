@@ -23,10 +23,6 @@ public class BankUserDriver {
         looping = true;
     }
 
-    private void teardown() {
-        baHandler.saveAll();
-    }
-
     public void doMain() {
         setup();
 
@@ -35,7 +31,6 @@ public class BankUserDriver {
             BankUserDriver.mainStep(option);
         }
 
-        teardown();
     }
 
     private static void mainStep(int option) {
