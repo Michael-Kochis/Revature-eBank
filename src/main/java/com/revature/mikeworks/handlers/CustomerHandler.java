@@ -71,7 +71,7 @@ public class CustomerHandler implements Serializable {
         return this.customerList.get(username);
     }
 
-    private Customer getCustomerByID(int personID) {
+    public Customer getCustomerByID(long personID) {
         for (Customer check: this.customerList.values()) {
             if (check.getPersonID() == personID) {
                 return check;

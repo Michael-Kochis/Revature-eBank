@@ -1,5 +1,6 @@
 package com.revature.mikeworks.components;
 
+import com.revature.mikeworks.dao.AccountOwnerDAO;
 import com.revature.mikeworks.enums.BankAccountStatus;
 import com.revature.mikeworks.enums.BankAccountType;
 import com.revature.mikeworks.handlers.CustomerHandler;
@@ -10,32 +11,29 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.Serializable;
-import java.util.TreeSet;
+import java.util.HashMap;
 
 public class BankAccount implements Serializable {
     private static final Logger log = LogManager.getLogger(BankAccount.class);
     private static final CustomerHandler cHandler = BankData.getCHandler();
     @Getter @Setter private BankAccountType type;
-    private TreeSet<String> owner = new TreeSet<>();
+    @Getter @Setter private HashMap<String, AccountOwner> owner;
     @Getter @Setter private double balance;
     @Getter @Setter private long accountNumber;
     @Getter @Setter private BankAccountStatus status;
 
     public BankAccount() {
+        this.owner = new HashMap<>();
         this.setType(BankAccountType.CHECKING);
         this.setStatus(BankAccountStatus.APPLIED);
     }
 
     public BankAccount(long num, BankAccountType nType, BankAccountStatus nStatus, double nBal) {
+        this();
         this.setAccountNumber(num);
         this.setType(nType);
         this.setStatus(nStatus);
         this.setBalance(nBal);
-    }
-
-    public void addOwner(String neoOwner) {
-        if (cHandler.contains(neoOwner))
-            this.owner.add(neoOwner);
     }
 
     public void removeOwner(String exOwner) {
@@ -46,10 +44,6 @@ public class BankAccount implements Serializable {
         }
     }
 
-    public TreeSet<String> getOwner() {
-        return this.owner;
-    }
-
     public String toString() {
         StringBuilder returnThis = new StringBuilder();
         returnThis.append(this.accountNumber);
@@ -57,9 +51,13 @@ public class BankAccount implements Serializable {
         returnThis.append(this.type);
         returnThis.append("\n");
         returnThis.append("Balance: ").append(this.getBalance() ).append("\n");
-        returnThis.append("Owner List: ").append(this.owner.toString() ).append("\n");
+        returnThis.append("Owner List: ").append(this.owner.keySet()).append("\n");
         returnThis.append("Status: ").append(this.getStatus() );
 
         return returnThis.toString();
+    }
+
+    public void addOwner(String name, AccountOwner nao) {
+        this.owner.put(name, nao);
     }
 }

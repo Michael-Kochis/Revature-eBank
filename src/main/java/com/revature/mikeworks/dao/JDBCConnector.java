@@ -10,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class JDBCConnector {
-    private static Logger log = LogManager.getLogger(JDBCConnector.class);
+    private static final Logger log = LogManager.getLogger(JDBCConnector.class);
     private static Connection conn;
     private static String url, root, passwd;
 
@@ -35,7 +35,6 @@ public class JDBCConnector {
             log.trace("New connection to database established.");
         } catch (Exception e) {
             log.fatal("Error accessing database\n", e);
-
         }
     }
 
