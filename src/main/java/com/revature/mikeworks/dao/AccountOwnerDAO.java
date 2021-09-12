@@ -46,7 +46,7 @@ public class AccountOwnerDAO implements iAccountOwnerDAO {
 
             while (rs.next()) {
                 long bankID = rs.getLong("bankid");
-                long ownerID = rs.getLong("ownerid");
+                long ownerID = rs.getLong("personid");
                 long accountID = rs.getLong("accountid");
 
                 AccountOwner neoAcct = new AccountOwner(
@@ -56,6 +56,7 @@ public class AccountOwnerDAO implements iAccountOwnerDAO {
                 if (neoAcct.getBankID() > AccountOwnerDAO.nextNumber)
                     AccountOwnerDAO.nextNumber = neoAcct.getBankID();
             }
+
             rs.close();
         } catch (SQLException e) {
             log.warn("Trial connection to database failed.", e);
@@ -99,4 +100,5 @@ public class AccountOwnerDAO implements iAccountOwnerDAO {
             writeAccountOwner(item);
         }
     }
+
 }

@@ -29,9 +29,6 @@ public class BankAccountHandler {
             System.out.println("Cannot Add duplicate account " +  neoAccount);
         } else {
             this.accountList.put(neoAccount.getAccountNumber(), neoAccount);
-            for (AccountOwner ao: neoAccount.getOwner().values()) {
-                daoAO.writeAccountOwner(ao);
-            }
         }
     }
 
@@ -42,6 +39,12 @@ public class BankAccountHandler {
     public boolean contains(Long seeking) {
         return this.accountList.containsKey(seeking);
     }
+    public BankAccount createNewAccount() {
+        BankAccount returnThis = new BankAccount();
+        returnThis.setAccountNumber(this.getNextAccountNumber());
+
+        return returnThis;
+    }
 
     public int size() {
         return this.accountList.size();
@@ -50,10 +53,6 @@ public class BankAccountHandler {
     public void loadAll() {
         this.accountList = dao.readAccounts();
         setNextBankAccountNumber();
-    }
-
-    public void saveAll() {
-        dao.writeAccounts(this.accountList);
     }
 
     public boolean accountExists(Long account) {
@@ -197,5 +196,9 @@ public class BankAccountHandler {
         String ownerName = cHandler.getCustomerByID(personID).getUsername();
         addOwnerRecord(neo);
         getAccountByNumber(accountNumber).addOwner(ownerName, neo);
+    }
+
+    public void assignAccountOwners() {
+        dao.assignAccountOwners();
     }
 }

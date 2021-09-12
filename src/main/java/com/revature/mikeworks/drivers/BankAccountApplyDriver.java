@@ -62,6 +62,7 @@ public class BankAccountApplyDriver {
     }
 
     private void doAddOwner() {
+        changeAccount();
         System.out.println("Enter username to join account");
         String username = scan.readString();
         Long ownerID = (long)cHandler.getCustomerByUsername(username).getPersonID();
@@ -69,6 +70,7 @@ public class BankAccountApplyDriver {
     }
 
     private void doRemoveOwner() {
+        changeAccount();
         System.out.println("Enter username to remove from account");
         String username = scan.readString();
         neoAccount.removeOwner(username);
@@ -80,5 +82,17 @@ public class BankAccountApplyDriver {
         } else {
             neoAccount.setType(BankAccountType.CHECKING);
         }
+    }
+
+    private void changeAccount() {
+        baHandler.showMyAccounts();
+        System.out.println("Which existing/applied account");
+        Long boot = scan.readLong();
+        neoAccount = baHandler.getAccountByNumber(boot);
+        if (neoAccount == null) {
+            neoAccount = baHandler.createNewAccount();
+            baHandler.addOwnerRecord(BankData.getWhoAmI().getPersonID(), neoAccount.getAccountNumber());
+        }
+        System.out.println(neoAccount);
     }
 }

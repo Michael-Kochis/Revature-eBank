@@ -6,10 +6,20 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class BankData {
-    @Getter
-    private static final CustomerHandler cHandler = new CustomerHandler();
-    @Getter
-    private static final BankAccountHandler baHandler = new BankAccountHandler();
+    private static CustomerHandler cHandler = new CustomerHandler();
+    private static BankAccountHandler baHandler = new BankAccountHandler();
     @Getter @Setter
     private static Customer whoAmI;
+
+    public static CustomerHandler getCHandler() {
+        if (cHandler == null)
+            cHandler = new CustomerHandler();
+        return cHandler;
+    }
+
+    public static BankAccountHandler getBaHandler() {
+        if (baHandler == null)
+            baHandler = new BankAccountHandler();
+        return baHandler;
+    }
 }
