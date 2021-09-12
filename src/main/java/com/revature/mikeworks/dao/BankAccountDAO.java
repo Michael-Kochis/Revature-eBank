@@ -18,9 +18,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BankAccountDAO implements iBankAccountDAO {
-    private static final Connection conn = JDBCConnector.getConn();
+    private static Connection conn = JDBCConnector.getConn();
     private static final Logger log = LogManager.getLogger(BankAccountDAO.class);
-    private static final BankAccountHandler baHandler = BankData.getBaHandler();
+    private static BankAccountHandler baHandler;
+
+     public BankAccountDAO() {
+         baHandler = BankData.getBaHandler();
+     }
 
     @Override
     public void deleteAccount(BankAccount toDelete) {
@@ -39,12 +43,15 @@ public class BankAccountDAO implements iBankAccountDAO {
         return aoDAO.readAccountOwners();
     }
 
-    private void assignAccountOwners() {
+    public void assignAccountOwners() {
+        baHandler = BankData.getBaHandler();
         HashMap<String, AccountOwner> tempAO = readAccountOwners();
 
+        System.out.println(tempAO);
         for (Map.Entry<String, AccountOwner> ao: tempAO.entrySet()) {
             BankAccount target = baHandler.findAccountByID(ao.getValue().getAccountID());
-            target.addOwner(ao.getKey(), ao.getValue());
+            if (target != null)
+                target.addOwner(ao.getKey(), ao.getValue());
         }
     }
 
@@ -52,7 +59,8 @@ public class BankAccountDAO implements iBankAccountDAO {
         HashMap<Long, BankAccount> returnThis = new HashMap<>();
 
         try {
-            PreparedStatement st = conn.prepareStatement("SELECT * FROM CUSTOMERS");
+            conn = JDBCConnector.getConn();
+            PreparedStatement st = conn.prepareStatement("SELECT * FROM ACCOUNTS");
             ResultSet rs = st.executeQuery();
 
             while (rs.next()) {
@@ -60,18 +68,19 @@ public class BankAccountDAO implements iBankAccountDAO {
                 int neoType = rs.getInt("type");
                 int neoStatus = rs.getInt("status");
                 float neoBal = rs.getFloat("balance");
+
                 BankAccount neoAcct = new BankAccount(
                         neoID,
                         BankAccountType.fromInt(neoType),
                         BankAccountStatus.fromInt(neoStatus),
                         neoBal
                 );
-                assignAccountOwners();
 
                 returnThis.put(neoAcct.getAccountNumber(), neoAcct);
             }
             rs.close();
         } catch (SQLException e) {
+            e.printStackTrace();
             log.warn("Trial connection to database failed.", e);
         }
 

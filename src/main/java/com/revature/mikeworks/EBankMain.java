@@ -1,5 +1,6 @@
 package com.revature.mikeworks;
 
+import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.dao.JDBCConnector;
 import com.revature.mikeworks.drivers.BankDriver;
 

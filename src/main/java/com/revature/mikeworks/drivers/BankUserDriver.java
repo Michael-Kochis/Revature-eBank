@@ -20,7 +20,8 @@ public class BankUserDriver {
     private void setup() {
         whoAmI = BankData.getWhoAmI();
         baHandler.loadAll();
-        looping = true;
+        baHandler.assignAccountOwners();
+       looping = true;
     }
 
     public void doMain() {

@@ -1014,3 +1014,708 @@ Balance: 0.0
 Owner List: [MPartridge]
 Status: APPLIED
 2021-09-11 15:40:57,981 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
+2021-09-11 19:18:16,356 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-11 19:18:16,385 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:51) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:19:59,145 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-11 19:19:59,173 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:51) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:24:08,786 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-11 19:24:08,815 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:51) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:26:18,474 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-11 19:26:18,506 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:51) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:26:28,299 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 1: CHECKING
+Balance: 0.0
+Owner List: [MPartridge]
+Status: APPLIED
+2021-09-11 19:26:54,997 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 1: CHECKING
+Balance: 0.0
+Owner List: [MPartridge]
+Status: APPLIED
+2021-09-11 19:26:59,818 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 1: CHECKING
+Balance: 0.0
+Owner List: [MPartridge]
+Status: APPLIED
+2021-09-11 19:27:25,630 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
+2021-09-11 19:30:46,614 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-11 19:30:46,659 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:51) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:35:39,077 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-11 19:35:39,108 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:57) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:39:17,795 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-11 19:39:17,827 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:57) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:39:25,150 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 1: CHECKING
+Balance: 0.0
+Owner List: [MPartridge]
+Status: APPLIED
+2021-09-11 19:43:10,583 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
+2021-09-11 19:43:34,990 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-11 19:43:35,023 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:43:48,485 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
+2021-09-11 19:44:00,101 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 19:44:00,132 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:47:50,499 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 19:47:50,533 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:51:05,226 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 19:51:18,598 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-11 19:51:18,623 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:59) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 19:51:47,747 ERROR c.r.m.d.BankAccountTransactionDriver [main] Attempt to access invalid account 1
+2021-09-11 19:52:09,277 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-11 20:02:25,596 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:02:25,626 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:60) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:02:39,065 INFO c.r.m.d.BankAccountApplyDriver [main] User applied for new account: 1: CHECKING
+Balance: 0.0
+Owner List: [SPartridge]
+Status: APPLIED
+2021-09-11 20:05:33,303 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:05:33,332 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:60) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:07:29,241 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 20:07:47,815 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:07:47,847 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:62) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:09:36,781 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 20:10:03,112 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:10:03,239 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:62) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:10:03,890 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:77) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:12:09,876 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 20:12:29,447 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:12:29,494 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:63) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:12:29,541 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:78) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:13:26,401 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 20:14:12,453 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:14:12,544 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:63) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:14:12,611 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:79) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:19:18,681 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 20:19:55,126 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:19:55,199 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:63) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:19:55,266 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:79) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:21:06,871 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:21:06,899 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:64) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:21:06,928 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:80) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:23:09,408 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:23:09,437 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:64) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:23:09,466 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:84) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:24:54,108 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:24:54,136 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:65) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:24:54,167 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:85) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:25:57,222 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 20:26:39,386 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:26:39,415 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:64) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:26:39,445 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:84) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:27:13,727 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 20:27:33,742 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:27:33,773 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:64) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:27:33,804 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:84) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:28:24,244 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:28:24,271 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:64) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:28:24,299 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:84) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:29:20,699 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:29:20,726 WARN c.r.m.d.BankAccountDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:556) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:64) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:29:20,756 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:82) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:36:08,590 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:36:08,693 WARN c.r.m.d.AccountOwnerDAO [main] Trial connection to database failed.
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndexPrimitive(OracleStatement.java:3899) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3857) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:270) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getLong(GeneratedResultSet.java:560) ~[ojdbc10-19.3.0.0.jar:19.12.0.0.0]
+	at com.revature.mikeworks.dao.AccountOwnerDAO.readAccountOwners(AccountOwnerDAO.java:49) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccountOwners(BankAccountDAO.java:39) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.assignAccountOwners(BankAccountDAO.java:43) [classes/:?]
+	at com.revature.mikeworks.dao.BankAccountDAO.readAccounts(BankAccountDAO.java:81) [classes/:?]
+	at com.revature.mikeworks.handlers.BankAccountHandler.loadAll(BankAccountHandler.java:54) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.setup(BankUserDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankUserDriver.doMain(BankUserDriver.java:27) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.attemptLogin(LoginDriver.java:23) [classes/:?]
+	at com.revature.mikeworks.drivers.LoginDriver.runLoginDriver(LoginDriver.java:46) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.mainStep(BankDriver.java:22) [classes/:?]
+	at com.revature.mikeworks.drivers.BankDriver.runMain(BankDriver.java:35) [classes/:?]
+	at com.revature.mikeworks.EBankMain.main(EBankMain.java:10) [classes/:?]
+2021-09-11 20:37:52,612 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 20:38:27,414 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:43:27,880 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:52:41,390 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:55:25,558 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 20:56:30,607 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:00:35,921 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:05:04,238 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:07:49,140 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:09:07,411 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:11:08,544 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:12:23,422 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-11 21:14:00,881 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:19:48,681 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:21:13,543 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-11 21:22:19,254 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
