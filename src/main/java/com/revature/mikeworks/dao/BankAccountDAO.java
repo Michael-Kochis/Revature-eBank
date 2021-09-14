@@ -47,7 +47,6 @@ public class BankAccountDAO implements iBankAccountDAO {
         baHandler = BankData.getBaHandler();
         HashMap<String, AccountOwner> tempAO = readAccountOwners();
 
-        System.out.println(tempAO);
         for (Map.Entry<String, AccountOwner> ao: tempAO.entrySet()) {
             BankAccount target = baHandler.findAccountByID(ao.getValue().getAccountID());
             if (target != null)
