@@ -5,6 +5,7 @@ import com.revature.mikeworks.components.BankAccount;
 import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.dao.AccountOwnerDAO;
 import com.revature.mikeworks.dao.BankAccountDAO;
+import com.revature.mikeworks.dao.LogDAO;
 import com.revature.mikeworks.enums.BankAccountStatus;
 import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
@@ -17,6 +18,7 @@ public class BankAccountHandler {
     @Getter private HashMap<Long, BankAccount> accountList;
     private static final BankAccountDAO dao = new BankAccountDAO();
     private static final AccountOwnerDAO daoAO = new AccountOwnerDAO();
+    private static final LogDAO daoL = new LogDAO();
     private static final CustomerHandler cHandler = BankData.getCHandler();
     private static final Logger log = LogManager.getLogger(BankAccountHandler.class);
 
@@ -70,6 +72,10 @@ public class BankAccountHandler {
     }
 
     public void deposit(long accountNumber, double amount) {
+        deposit(accountNumber, amount, 0L);
+    }
+
+    public void deposit(long accountNumber, double amount, long otherAccount) {
         if (amount < 0 ) {
             log.error("Attempt to deposit negative money into: " + accountNumber);
         } else if (!this.validAccount(accountNumber)) {
@@ -79,7 +85,10 @@ public class BankAccountHandler {
             editThis.setBalance(editThis.getBalance() + amount);
             this.accountList.remove(accountNumber);
             this.accountList.put(accountNumber, editThis);
+            dao.updateAccount(accountNumber);
             log.info(amount + " was deposited into account " + accountNumber);
+            daoL.createLogEntry((long) BankData.getWhoAmI().getPersonID(),
+                    1, accountNumber, otherAccount, amount, "");
         }
     }
 
@@ -100,8 +109,8 @@ public class BankAccountHandler {
             if (amount > this.accountList.get(from).getBalance()) {
                 log.error("Not enough money for transfer: " + from + " " + to);
             } else {
-                withdraw(from, amount);
-                deposit(to, amount);
+                withdraw(from, amount, to);
+                deposit(to, amount, from);
             }
 
         } else {
@@ -119,6 +128,10 @@ public class BankAccountHandler {
     }
 
     public void withdraw(long accountNumber, double amount) {
+        withdraw(accountNumber, amount, 0L);
+    }
+
+    public void withdraw(long accountNumber, double amount, long otherAccount) {
         if (amount < 0 ) {
             log.error("Attempt to withdraw negative money from: " + accountNumber);
         } else if (!this.validAccount(accountNumber)) {
@@ -132,6 +145,9 @@ public class BankAccountHandler {
                 this.accountList.remove(accountNumber);
                 this.accountList.put(accountNumber, editThis);
                 log.info(amount + " was withdrawn from account " + accountNumber);
+                dao.updateAccount(accountNumber);
+                daoL.createLogEntry((long) BankData.getWhoAmI().getPersonID(),
+                        2, accountNumber, otherAccount, amount, "");
             }
         }
     }
@@ -151,6 +167,7 @@ public class BankAccountHandler {
             editThis.setStatus(neoStatus);
             this.accountList.remove(account);
             this.accountList.put(account, editThis);
+            dao.updateAccount(editThis);
         } else {
             log.error("Attempt to modify non-existing account: " + account);
         }
@@ -174,6 +191,7 @@ public class BankAccountHandler {
         this.accountList.remove(accountNumber);
         this.accountList.put(accountNumber, editThis);
         log.info("Status of account " + accountNumber + " changed to " + neoStatus);
+        dao.updateAccount(editThis);
     }
 
     public BankAccount getAccountByNumber(Long seeking) {

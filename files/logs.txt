@@ -1719,3 +1719,52 @@ Logged in as: SPartridge
 2021-09-11 21:21:13,543 INFO c.r.m.d.LoginDriver [main] 
 Logged in as: SPartridge
 2021-09-11 21:22:19,254 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-13 20:28:34,792 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-13 20:28:44,950 INFO c.r.m.d.AccountApprovalDriver [main] IBDBoss approved account 2
+2021-09-13 20:28:48,659 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-13 20:29:00,493 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-13 20:29:22,410 ERROR c.r.m.h.BankAccountHandler [main] Attempt to deposit money into invalid account: 2
+2021-09-13 20:29:29,563 ERROR c.r.m.h.BankAccountHandler [main] Attempt to deposit money into invalid account: 2
+2021-09-13 20:29:36,155 ERROR c.r.m.h.BankAccountHandler [main] Attempt to withdraw money from invalid account: 2
+2021-09-13 20:29:57,609 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
+2021-09-13 20:30:05,504 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: IBDBoss
+2021-09-13 20:35:49,230 INFO c.r.m.d.LoginDriver [main] Logged out: IBDBoss
+2021-09-13 20:39:13,103 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: WageSlave
+2021-09-13 20:39:24,558 ERROR c.r.m.h.BankAccountHandler [main] Attempt to modify non-existing account: 6
+2021-09-13 20:39:24,558 INFO c.r.m.d.AccountApprovalDriver [main] WageSlave denied account 6
+2021-09-13 20:39:31,564 INFO c.r.m.d.AccountApprovalDriver [main] WageSlave approved account 2
+2021-09-13 20:40:23,010 INFO c.r.m.d.LoginDriver [main] Logged out: WageSlave
+2021-09-13 20:40:31,675 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-13 20:40:54,134 INFO c.r.m.h.BankAccountHandler [main] 1000.0 was deposited into account 2
+2021-09-13 20:42:46,667 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-13 20:43:04,481 INFO c.r.m.h.BankAccountHandler [main] 1000.0 was deposited into account 2
+2021-09-13 20:43:51,482 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-13 20:44:08,303 INFO c.r.m.h.BankAccountHandler [main] 1000.0 was deposited into account 2
+2021-09-13 20:46:48,052 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
+2021-09-13 20:46:58,597 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-13 20:47:13,840 INFO c.r.m.h.BankAccountHandler [main] 1000.0 was deposited into account 2
+2021-09-13 20:48:42,954 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-13 20:48:57,155 INFO c.r.m.h.BankAccountHandler [main] 1000.0 was deposited into account 2
+2021-09-13 20:50:41,924 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-13 20:50:55,765 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-13 20:51:05,470 INFO c.r.m.h.BankAccountHandler [main] 1000.0 was deposited into account 2
+2021-09-13 20:54:15,818 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: SPartridge
+2021-09-13 20:54:25,957 INFO c.r.m.h.BankAccountHandler [main] 1000.0 was deposited into account 2
+2021-09-13 20:55:57,010 INFO c.r.m.d.LoginDriver [main] Logged out: SPartridge
+2021-09-13 20:56:05,426 INFO c.r.m.d.LoginDriver [main] 
+Logged in as: MPartridge
+2021-09-13 20:56:51,010 INFO c.r.m.h.BankAccountHandler [main] 200.0 was withdrawn from account 2
+2021-09-13 20:56:59,351 INFO c.r.m.h.BankAccountHandler [main] 100.0 was withdrawn from account 2
+2021-09-13 20:56:59,405 INFO c.r.m.h.BankAccountHandler [main] 100.0 was deposited into account 2
+2021-09-13 20:57:05,179 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
