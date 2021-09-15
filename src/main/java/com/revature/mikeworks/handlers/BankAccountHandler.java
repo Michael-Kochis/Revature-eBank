@@ -4,9 +4,8 @@ import com.revature.mikeworks.components.AccountOwner;
 import com.revature.mikeworks.components.BankAccount;
 import com.revature.mikeworks.components.BankData;
 import com.revature.mikeworks.dao.AccountOwnerDAO;
-import com.revature.mikeworks.dao.BankAccountDAO;
-import com.revature.mikeworks.dao.LogDAO;
 import com.revature.mikeworks.enums.BankAccountStatus;
+import com.revature.mikeworks.services.BankAccountService;
 import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,9 +15,7 @@ import java.util.HashMap;
 public class BankAccountHandler {
     private static long nextAccountNumber;
     @Getter private HashMap<Long, BankAccount> accountList;
-    private static final BankAccountDAO dao = new BankAccountDAO();
-    private static final AccountOwnerDAO daoAO = new AccountOwnerDAO();
-    private static final LogDAO daoL = new LogDAO();
+    private static final BankAccountService accountService = new BankAccountService();
     private static final CustomerHandler cHandler = BankData.getCHandler();
     private static final Logger log = LogManager.getLogger(BankAccountHandler.class);
 
@@ -53,7 +50,7 @@ public class BankAccountHandler {
     }
 
     public void loadAll() {
-        this.accountList = dao.readAccounts();
+        this.accountList = accountService.loadAll();
         setNextBankAccountNumber();
     }
 
@@ -85,10 +82,8 @@ public class BankAccountHandler {
             editThis.setBalance(editThis.getBalance() + amount);
             this.accountList.remove(accountNumber);
             this.accountList.put(accountNumber, editThis);
-            dao.updateAccount(accountNumber);
             log.info(amount + " was deposited into account " + accountNumber);
-            daoL.createLogEntry((long) BankData.getWhoAmI().getPersonID(),
-                    1, accountNumber, otherAccount, amount, "");
+            accountService.updateAccount(accountNumber, 1, amount, otherAccount);
         }
     }
 
@@ -145,9 +140,7 @@ public class BankAccountHandler {
                 this.accountList.remove(accountNumber);
                 this.accountList.put(accountNumber, editThis);
                 log.info(amount + " was withdrawn from account " + accountNumber);
-                dao.updateAccount(accountNumber);
-                daoL.createLogEntry((long) BankData.getWhoAmI().getPersonID(),
-                        2, accountNumber, otherAccount, amount, "");
+                accountService.updateAccount(accountNumber, 2, amount, otherAccount);
             }
         }
     }
@@ -167,7 +160,7 @@ public class BankAccountHandler {
             editThis.setStatus(neoStatus);
             this.accountList.remove(account);
             this.accountList.put(account, editThis);
-            dao.updateAccount(editThis);
+            accountService.updateAccount(editThis);
         } else {
             log.error("Attempt to modify non-existing account: " + account);
         }
@@ -191,7 +184,7 @@ public class BankAccountHandler {
         this.accountList.remove(accountNumber);
         this.accountList.put(accountNumber, editThis);
         log.info("Status of account " + accountNumber + " changed to " + neoStatus);
-        dao.updateAccount(editThis);
+        accountService.updateAccount(editThis);
     }
 
     public BankAccount getAccountByNumber(Long seeking) {
@@ -203,7 +196,7 @@ public class BankAccountHandler {
     }
 
     public void addOwnerRecord(AccountOwner newAO) {
-        daoAO.writeAccountOwner(newAO);
+        accountService.writeAccountOwner(newAO);
     }
 
     public void addOwnerRecord(long personID, long accountNumber) {
@@ -217,6 +210,6 @@ public class BankAccountHandler {
     }
 
     public void assignAccountOwners() {
-        dao.assignAccountOwners();
+        accountService.assignAccountOwners();
     }
 }

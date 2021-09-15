@@ -1768,3 +1768,11 @@ Logged in as: MPartridge
 2021-09-13 20:56:59,351 INFO c.r.m.h.BankAccountHandler [main] 100.0 was withdrawn from account 2
 2021-09-13 20:56:59,405 INFO c.r.m.h.BankAccountHandler [main] 100.0 was deposited into account 2
 2021-09-13 20:57:05,179 INFO c.r.m.d.LoginDriver [main] Logged out: MPartridge
+2021-09-15 09:28:50,892 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: Gojira
+Name: Gojira TokyoStomp
+Email: gojira@kingofmonsters.com
+Access level: CUSTOMER
+2021-09-15 09:31:15,354 INFO c.r.m.d.RegisterDriver [main] New Customer registered: Username: Gojira
+Name: Gojira TokyoStomper
+Email: gojira@kingofmonsters.com
+Access level: CUSTOMER
